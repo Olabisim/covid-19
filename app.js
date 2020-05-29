@@ -26,7 +26,7 @@ var commentRoutes = require("./routes/comments"),
         campgroundRoutes = require("./routes/campgrounds"),
         authRoutes = require("./routes/index");
  
-mongoose.connect("process.env.DB_CONNECTION", { useNewUrlParser: true });
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 
