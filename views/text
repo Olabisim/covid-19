@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->	
+            <link rel="icon" type="image/png" href="../logreg/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/animate/animate.css">
+    <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->	
+            <link rel="stylesheet" type="text/css" href="../logreg/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="../logreg/css/util.css">
+            <link rel="stylesheet" type="text/css" href="../logreg/css/main.css">
+    <!--===============================================================================================-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--===============================================================================================-->
+
+</head>
+<style type="text/css">
+</style>
+<body>
+
+
+
+<!-- <h1>LOGIN!</h1>
+
+<form action="/login" method="POST">
+<input type="text" name="username" placeholder="username">
+<input type="password" name="password" placeholder="password">
+<input type="submit" value="login">
+</form> -->
+
+
+
+	<div class="container-login100" style="background-image: url('../logreg/images/bg-01.jpg');">
+
+
+		<!-- for the flash --> 
+            <div class="container">
+                <% if(error && error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <i class="bell slash outline icon"></i>
+                            <%= error %>
+                    </div>
+                    <% } %>
+                    <% if(success && success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <i class="bell outline icon"></i>
+                            <%= success %>
+                    </div>
+                <% } %>
+            </div>
+		<!-- end of flash -->
+
+
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+            
+			<form action="/posts" method="POST" class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+                    New Content for Covid-19
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter name">
+					<input class="input100" type="text" name="name" placeholder="name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter image">
+					<input class="input100" type="text" name="image" placeholder="image">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter description">
+					<input class="input100" type="text" name="description" placeholder="description">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" type="submit">
+						Submit
+					</button>
+				</div>
+
+				<div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						or
+					</span>
+				</div>
+<!-- 
+				<div class="flex-c p-b-112">
+					<a href="#" class="login100-social-item">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+
+					<a href="#" class="login100-social-item">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+					</a>
+				</div> -->
+
+				<div class="text-center">
+					<a href="/posts" class="txt2 hov1">
+						Go Back
+					</a>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/bootstrap/js/popper.js"></script>
+	<script src="../logreg/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../logreg/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../logreg/js/main.js"></script>
+
+</body>
+</html>

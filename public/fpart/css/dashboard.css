@@ -1,0 +1,212 @@
+/* DASHBOARD STYLING */
+@import "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.dashboard-navbar {
+  /* padding: 15px 10px; */
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+}
+
+.navbar-btn {
+  font-size: 40px;
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  perspective: 1500px;
+}
+
+#sidebar {
+  min-width: 150px;
+  max-width: 150px;
+  background: rgb(123, 123, 252);
+  color: #fff;
+  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+  transform-origin: bottom left;
+  /* padding-left: 10px; */
+}
+
+#sidebar.active {
+  margin-left: -50px;
+  transform: rotateY(100deg);
+}
+#sidebarCollapse {
+
+}
+#sidebar ul{
+  margin-top: 150px;
+}
+
+#sidebar ul li > a{
+  padding: 20px;
+  font-size: 1.1em;
+  display: block;
+  /* margin-bottom: 10px; */
+  outline: none;
+  transition: all 350ms ease-in;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+#sidebarCollapse {
+  width: 40px;
+  height: 40px;
+  background: none;
+  cursor: pointer;
+}
+
+#sidebarCollapse span {
+  width: 60%;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  background: #555;
+  transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+  transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+  opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+  transform: none;
+  opacity: 1;
+  margin: 5px auto;
+}
+
+.input-field{
+  margin-bottom: 10px;
+}
+
+.input-field label{
+  display: block;
+  font-weight: 600;
+}
+
+.input-field input,
+.input-field textarea{
+  width: 100%;
+  outline: none;
+  padding: 10px;
+}
+
+.input-field textarea{
+  height: 15rem;
+}
+
+.submit-button{
+  background-color: blue;
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -100px;
+    transform: rotateY(90deg);
+  }
+  #sidebar.active {
+    margin-left: 0;
+    transform: none;
+  }
+  #sidebarCollapse span:first-of-type,
+  #sidebarCollapse span:nth-of-type(2),
+  #sidebarCollapse span:last-of-type {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+  }
+  #sidebarCollapse.active span {
+    margin: 0 auto;
+  }
+  #sidebarCollapse.active span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+  }
+  #sidebarCollapse.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #sidebarCollapse.active span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+  li.profile{
+    margin-top: -70px !important;
+    margin-left: 200px !important;
+  }
+}
+
+@media (max-width:990px){
+  li.profile{
+    margin-top: -70px !important;
+    margin-left: 200px !important;
+  }
+}
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 5px;
+  background-color: #62aae4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 80px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 6px 10px !important;
+  text-decoration: none;
+  display: block;
+  font-size: 14px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+}
+
+.dropdown-content a:hover {background-color: #4b62e0;}
+.dropdown:hover .dropdown-content {display: block;}
+
+/* END OF BELL DROPDOWN */

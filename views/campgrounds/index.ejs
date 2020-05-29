@@ -1,0 +1,237 @@
+
+<html>	
+        <head>		
+                <meta name="theme-color" content="navy" />
+                <link rel="stylesheet" href="fpart/css/virusanimation.css">		
+                <link rel="stylesheet" href="../fpart/css/carousel.css">	
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+                <link rel="stylesheet" href="../fpart/css/ham.css" type="text/css">
+                <link rel="stylesheet" href="../fpart/css/posts/index.css">	
+                <title>COVID-19 FOR NIGERIANS</title>	
+
+
+        <style type="text/css">
+                .the_img {
+                        width: 60%;
+                        margin: auto;
+                }
+        </style>
+
+
+        </head>	
+        
+        <body>
+                      
+                <div class="row animated-fast1 fadeInUp animate-box">
+                        <div class="col-sm-8">
+                                <div class="first_div">
+                                        <section>
+        
+                                                <div id="menu-bar">			
+                                                        <div id="menu" onclick="onClickMenu()">				
+                                                                <div id="bar1" class="bar"></div>				
+                                                                <div id="bar2" class="bar"></div>				
+                                                                <div id="bar3" class="bar"></div>			
+                                                        </div>			
+                                                        <ul class="navV" id="navV">				
+                                                                <li><a href="/">Home</a></li>				
+                                                                <li><a href="/posts">posts</a></li>			
+                                                        </ul>		
+                                                </div>		
+                                                <div class="menu-bg" id="menu-bg"></div>        
+
+                                        </section>	
+                                        <div>
+                                                <div class="sampu">
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                        <div class="insampu"></div>
+                                                </div>	
+                                        </div>
+                                        
+                                </div>          
+                        </div>
+                        <div class="col-sm-4">                                                             
+                                <div class="second">
+                                        <p id="home-slide1">
+                                                WELCOME
+                                        </p>
+                                        <p id="home-slide2">
+                                                TO
+                                        </p>
+                                        <p id="home-slide3">
+                                                COVID-19
+                                        </p>
+                                        <p id="home-slide4">
+                                                POSTS.
+                                        </p>
+                                </div>
+                        </div>
+                </div> 
+                <div class="ui fixed inverted menu">
+                        <div class="ui container">
+                            <div class="header item"><i class="fire icon"></i>Nicov</div>
+                            <% if(!currentUser){ %>
+                                    <a href="/login" class="item">Login</a>
+                                    <a href="/register" class="item">Sign up for a pro account</a>
+                            <% } else { %>
+                                    <a href="#" class="item">
+					<i class="star outline icon"></i> <%= currentUser.username %></a>
+                                    <a href="/logout" class="item">Logout</a>
+                            <% } %>
+                        </div>
+                </div>
+                
+                <div class="container uiprobs">
+                        <% if(error && error.length > 0){ %>
+                        <div class="alert alert-danger" role="alert">
+                                <i class="bell slash outline icon"></i>
+                                <%= error %>
+                        </div>
+                        <% } %>
+                        <% if(success && success.length > 0){ %>
+                        <div class="alert alert-success" role="alert">
+                                <i class="bell outline icon"></i>
+                                <%= success %>
+                        </div>
+                        <% } %>
+                </div>
+                
+
+                <div class="forfixed">
+                        <a href="/posts/new">
+                                <h2>Stick anything about covid.</h2>
+                                <p>
+                                        <!-- <a class="ui basic button black" href="/posts/new" style="border-left: none;">Place Content <i class="location arrow icon"></i></a> -->
+                                        <img src="../fpart/full/newpost1.png" alt="" class="the_img">
+                                </p>
+                        </a>
+                </div>
+                
+
+
+
+
+                <div class="ui main text container">
+                        <div class="ui top attached">
+                                <div class="ui divided items">
+                                        <% for (var i = campgrounds.length-1; i >= 0; i--) { %>
+                                        <% var campground = campgrounds[i]; %>        
+                                        <div class="item">
+                                                <div class="image">
+                                                        <img src="<%=campground.image%>" style="
+                                                        border: 3px solid #700f70;">
+                                                </div>
+                                        
+                                                <div class="content" style="padding-left: 70px; margin-top: -6px;">
+                                                        <a class="ui violet button capi" href="/posts/<%= campground._id%>" style="background-color: #700f70;"><%= campground.name %></a>
+                                                        <div class="space">
+                                                                <div class="meta">
+                                                                        <span><%= campground.created.toDateString() %></span>
+                                                                </div>
+                                                        </div>
+                                                        <div class="description">
+                                                                <p><%-campground.description.substring(0, 100)%>...</p>
+                                                        </div>
+
+                                                        <div class="extra">
+                                                                <a class="ui floated basic blue button" href="/posts/<%= campground._id%>">
+                                                                        <%= campground.comments.length %>
+                                                                        <span class="the_comment">
+                                                                                <i class="comment alternate icon"></i>
+                                                                        </span>
+                                                                </a>
+                                                                <a href="/posts/<%= campground._id%>">
+                                                                        <div class="ui labeled button" tabindex="0" style="display: -webkit-box;">
+                                                                                <% if(campground.likes.length == 0 || campground.likes.length == 1){ %>
+                                                                                        <div class="ui red button">
+                                                                                                <i class="heart icon"></i> Like
+                                                                                        </div>
+                                                                                        <a class="ui basic red left pointing label">
+                                                                                                <%= campground.likes.length %>
+                                                                                        </a>
+                                                                                <% }else { %>
+                                                                                        <div class="ui red button">
+                                                                                                <i class="heart icon"></i> Likes
+                                                                                        </div>
+                                                                                        <a class="ui basic red left pointing label">
+                                                                                                <%= campground.likes.length %>
+                                                                                        </a>
+                                                                                <% } %>
+                                                                        </div>
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <% }%>
+                                </div>
+                        </div>
+                </div>
+                
+                
+
+                <section class="footer_section">
+                        <footer>
+                                <div>
+                                        <p>© 2020 developed by <span>Olabisi</span></p>
+                                </div>
+                                <div> 
+                                        <a href="https://www.instagram.com/odun_olaa/" target="_blank">
+                                                <i class="instagram icon"></i>
+                                        </a>
+                                        <a href="https://twitter.com/OlabisiOdunayo6" target="_blank">
+                                                <i class="twitter icon"></i>
+                                        </a>
+                                        <a href="#" target="_blank">
+                                                <i class="whatsapp icon"></i>
+                                        </a>
+                                </div>
+                                <div>
+                                        <p>Proudly created for covid-19 - <span>(web illustratons from <a href="https://undraw.co/illustrations" target="_blank">undraw.co</a>)</span></p>
+                                </div>
+                        </footer>
+                
+                </section>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script>
+                        function onClickMenu(){	
+                                document.getElementById("menu").classList.toggle("change");	
+                                document.getElementById("navV").classList.toggle("change");		
+                                document.getElementById("menu-bg").classList.toggle("change-bg");
+                        }
+                </script>	
+
+
+
+
+
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="fpart/js/ham.js"></script>
+
+
+        </body>
+</html>
+

@@ -1,0 +1,189 @@
+       
+.sampu {
+        margin-top: 250px;
+        border-radius: 50%;
+        animation: smoothe 2s linear infinite;
+}
+.insampu {
+        height: 5px;
+        width: 5px;
+        background: white;
+        border-radius: 50%;
+}
+.insampu:nth-of-type(1) {
+        animation: first 10s linear infinite;
+}
+
+@keyframes first {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        13% {
+                transform: translate(15px, 20px);
+        }
+        66% {
+                transform: translate(-15px, 40px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(2) {
+        animation: first2 7s linear infinite;
+}
+@keyframes first2 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        23% {
+                transform: translate(10px, 15px);
+        }
+        60% {
+                transform: translate(-10px, 30px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(3) {
+        animation: first3 4s linear infinite;
+}
+@keyframes first3 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        33% {
+                transform: translate(5px, 10px);
+        }
+        86% {
+                transform: translate(-5px, 20px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(4) {
+        animation: first4 1s linear infinite;
+}
+@keyframes first4 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        30% {
+                transform: translate(0px, 5px);
+        }
+        60% {
+                transform: translate(-0px, 10px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(5) {
+        animation: first5 5s linear infinite;
+}
+@keyframes first5 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        20% {
+                transform: translate(15px, 20px);
+        }
+        40% {
+                transform: translate(-15px, -20px);
+        }
+        60% {
+                transform: translate(15px, -20px);
+        }
+        80% {
+                transform: translate(-15px, 20px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(6) {
+        animation: first6 15s linear infinite;
+}
+@keyframes first6 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        30% {
+                transform: translate(15px, 20px);
+        }
+        60% {
+                transform: translate(-15px, 40px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(7) {
+        animation: first7 3s linear infinite;
+}
+@keyframes first7 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        30% {
+                transform: translate(15px, 20px);
+        }
+        60% {
+                transform: translate(-15px, 0px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(8) {
+        animation: first8 2s linear infinite;
+}
+@keyframes first8 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        30% {
+                transform: translate(5px, 10px);
+        }
+        60% {
+                transform: translate(-1px, 4px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(9) {
+        animation: first9 5s linear infinite;
+}
+@keyframes first9 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        30% {
+                transform: translate(15px, 20px);
+        }
+        60% {
+                transform: translate(-5px, 0px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}
+.insampu:nth-of-type(10) {
+        animation: first10 5s linear infinite;
+}
+@keyframes first10 {
+        0% {
+                transform: translate(0px, 0px);
+        }
+        60% {
+                transform: translate(15px, 20px);
+        }
+        70% {
+                transform: translate(-10px, 5px);
+        }
+        100% {
+                transform: translate(0px, 0px);
+        }
+}

@@ -1,0 +1,131 @@
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption-full hr {
+    background-color: skyblue;
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 100), rgba(65, 105, 225, 0), rgba(255, 255, 255, 100));
+}
+
+.caption-full p em {
+    color: navy;
+}
+#form {
+    display: inline;
+}
+.spa {
+    margin-top: 7em;
+}
+.upp {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: purple;
+}
+h2.upp {
+    color: navy; 
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+}
+.flachi {
+    width: 77%;
+}
+.col-sm-8 {
+    padding: 0;
+    margin: 0;
+}
+.sett {
+    margin-top: 110px;
+}
+.ui.fixed.inverted.menu {
+        background-color: navy;
+}
+.input-style {
+    border: 1px solid navy;
+}
+.comment-style {
+    font-family: algerian;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: navy;
+    font-size: 12px;
+}
+.bar {
+        background-color: black;
+}
+img.circle {
+    border-radius: 0%;
+    border: 5px solid navy;
+    transition: 1s;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.circle:hover {
+    border-radius: 50%;
+}
+
+
+.toggle {
+    border-radius: 50% !important;
+}
+
+
+.thumbnail hr {
+    background-color: navy;
+    height: 1px;
+    margin: auto;
+    width: 100px;
+    margin-bottom: 25px;
+}
+p:first-child {
+    margin-top: 40px;
+}
+.ui.button > .icon:not(.button) {
+    margin: 0;
+}
+i.trash.alternate.icon {
+    animation: delbtn 3s linear infinite;
+}
+@keyframes delbtn {
+    0% {
+            transform: translate(0px, 0px);
+    }
+    5% {
+            transform: translate(0px, -7px);
+    }
+    10% {
+            transform: translate(0px, 0px);
+    }
+    15% {
+            transform: rotate(60deg);
+    }
+    20% {
+            transform: rotate(-60deg);
+    }
+    25% {
+            transform: rotate(0deg);
+    }
+    100% {
+            transform: rotate(0deg);
+    }
+}
+
+
+.col-md-12 strong {
+    color: purple;
+    font-weight: 100;
+}
+
+
+.form-group {
+    margin-bottom: 1.5em;
+}

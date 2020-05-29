@@ -1,0 +1,622 @@
+<!--
+         ===========================================================================================
+                        JUST TO PUT UNCLICKABLE BUTTON  AT UNLOGIN PART
+         =========================================================================================== 
+-->
+<html>	
+        <head>		
+                <meta name="theme-color" content="navy" />	
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">		
+                <link rel="stylesheet" href="fpart/css/carousel.css">		
+                <link rel="stylesheet" href="fpart/css/virusanimation.css">	
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+                <link rel="stylesheet" href="fpart/css/ham.css" type="text/css">	
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                <script>
+                    jQuery(document).ready(function($) {
+                        $('.counter').counterUp({
+                            delay: 10,
+                            time: 1000
+                        });
+                    });
+                </script>
+                <title>COVID-19 FOR NIGERIANS</title>	
+        </head>	
+        
+        <body>	
+                
+                <!-- SECTION 1 -->
+                <section>
+                        <div class="row animated-fast1 fadeInUp animate-box">
+                                <div class="col-sm-8">
+                                        <div class="first_div">
+                                                <section>
+                
+                                                        <div id="menu-bar">			
+                                                                <div id="menu" onclick="onClickMenu()">				
+                                                                        <div id="bar1" class="bar"></div>				
+                                                                        <div id="bar2" class="bar"></div>				
+                                                                        <div id="bar3" class="bar"></div>			
+                                                                </div>			
+                                                                <ul class="navV" id="navV">				
+                                                                        <li><a href="/">Home</a></li>				
+                                                                        <li><a href="/posts">posts</a></li>			
+                                                                </ul>		
+                                                        </div>		
+                                                        <div class="menu-bg" id="menu-bg"></div>        
+
+                                                </section>	
+                                                <div id="sampup">
+                                                        <div class="sampu">
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                                <div class="insampu"></div>
+                                                        </div>	
+                                                </div>
+                                                
+                                        </div>          
+                                </div>
+                                <div class="col-sm-4">                                                             
+                                        <div class="second" >
+                                                <p id="home-slide1">
+                                                        CORONAVIRUS 
+                                                </p>
+                                                <p id="home-slide2">
+                                                        2020
+                                                </p>
+                                                <p id="home-slide3">
+                                                        FOR
+                                                </p>
+                                                <p id="home-slide4">
+                                                        NIGERIANS
+                                                </p>
+                                        </div>
+                                </div>
+                        </div> 
+
+
+
+
+
+
+                        <div class="container the_space">
+                                <% if(error && error.length > 0){ %>
+                                <div class="alert alert-danger" role="alert">
+                                        <i class="bell slash outline icon"></i>
+                                        <%= error %>
+                                </div>
+                                <% } %>
+                                <% if(success && success.length > 0){ %>
+                                <div class="alert alert-success" role="alert">
+                                        <i class="bell outline icon"></i>
+                                        <%= success %>
+                                </div>
+                                <% } %>
+                        </div>
+
+
+
+
+                        <div class="second_div">
+                                <div class="row animated-fast1 fadeInUp animate-box">
+                                        <div class="col-lg-12 col-sm-12" >
+                                                <h2 id="worldwide">WORLD-WIDE</h2>
+                                                <div class="world general">
+                                                        <div class="spec_num">
+                                                                <p>Confirmed Cases</p>
+                                                                <h2 class="counter"><%= data_one["confirmed"]["value"] %></h2>
+                                                        </div>
+                                                        <div>
+                                                                <p>Deaths</p>
+                                                                <h2 class="counter"><%= data_one["deaths"]["value"] %></h2>
+                                                        </div>
+                                                        <div>
+                                                                <p>Recovered</p>
+                                                                <h2 class="counter"><%= data_one["recovered"]["value"] %></h2>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row animated-fast1 fadeInUp1 animate-box" id="test1">
+                                        <div class="col-lg-4 col-sm-4 ">
+                                                <div class="country" id="circle1">   
+                                                        <h2>USA</h2>
+                                                        <div class="general">
+                                                                <div>
+                                                                        <p>Confirmed Cases</p>
+                                                                        <h2 class="counter"><%= data_two["confirmed"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Deaths</p>
+                                                                        <h2 class="counter"><%= data_two["deaths"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Recovered</p>
+                                                                        <h2 class="counter"><%= data_two["recovered"]["value"] %></h2>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4">
+                                                <div class="country" id="circle2">   
+                                                        <h2 class="main_country">NIGERIA</h2>
+                                                        <div class="general my_country">
+                                                                <div>
+                                                                        <p>Confirmed Cases</p>
+                                                                        <h2 class="counter"><%= data_three["confirmed"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Deaths</p>
+                                                                        <h2 class="counter"><%= data_three["deaths"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Recovered</p>
+                                                                        <h2 class="counter"><%= data_three["recovered"]["value"] %></h2>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4">
+                                                <div class="country" id="circle3">   
+                                                        <h2>SPAIN</h2>
+                                                        <div class="general">
+                                                                <div>
+                                                                        <p>Confirmed Cases</p>
+                                                                        <h2 class="counter"><%= data_six["confirmed"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Deaths</p>
+                                                                        <h2 class="counter"><%= data_six["deaths"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Recovered</p>
+                                                                        <h2 class="counter"><%= data_six["recovered"]["value"] %></h2>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row animated-fast1 fadeInUp2 animate-box">
+                                        <div class="col-lg-4 col-sm-6">
+                                                <div class="country" id="circle4">   
+                                                        <h2>ITALY</h2>
+                                                        <div class="general">
+                                                                <div>
+                                                                        <p>Confirmed Cases</p>
+                                                                        <h2 class="counter"><%= data_five["confirmed"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Deaths</p>
+                                                                        <h2 class="counter"><%= data_five["deaths"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Recovered</p>
+                                                                        <h2 class="counter"><%= data_five["recovered"]["value"] %></h2>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-6">
+                                                <div class="country" id="circle5">   
+                                                        <h2>CHINA</h2>
+                                                        <div class="general">
+                                                                <div>
+                                                                        <p>Confirmed Cases</p>
+                                                                        <h2 class="counter"><%= data_four["confirmed"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Deaths</p>
+                                                                        <h2 class="counter"><%= data_four["deaths"]["value"] %></h2>
+                                                                </div>
+                                                                <div>
+                                                                        <p>Recovered</p>
+                                                                        <h2 class="counter"><%= data_four["recovered"]["value"] %></h2>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+
+
+                <!-- SECTION 3 -->
+                
+                <section>
+                        <div class="statistics_div">
+                                <div class="chart_purpose">
+                                        BREAKDOWN OF COVID-19 IN NIGERIA
+                                </div>
+                                <div class="adjuss">
+                                        <canvas id="bar-chart"></canvas>
+                                </div>
+                                <div style="text-align: right;">
+                                        <a href="/overall" class="ui black basic button">show more
+						<i class="chevron right icon"></i></a>
+                                </div>
+                        </div>
+                </section>
+
+
+                <!-- SECTION 4 -->
+                <div class="pre_carousel_note">
+                        <h2>PRECAUTIONS TO STAY SAFE FROM COVID-19</h2>
+                        <h2>BY</h2>
+                </div>
+
+                <section>
+                        <div class="carousel_div">
+                                <div class="maiin">
+                                        <div class="slider">
+                                                <div class="slide active">
+                                                        <h1>3m away</h1>
+                                                <p>stay away as far as possible so as to avoid being in touch with</p>
+                                                </div>
+                                                <div class="slide">
+                                                        <h1>No Touching</h1>
+                                                <p>Avoid contact based greetings</p>
+                                                </div>
+                                                <div class="slide">
+                                                        <h1>Social gathering</h1>
+                                                <p>avoid gatherings of any kind like parties, clubbing, blowouts e.t.c.</p>
+                                                </div>
+                                                <div class="slide">
+                                                        <h1>dispose properly</h1>
+                                                <p>dispose any masks, cleaning agents like tissues, towel properly</p>
+                                                </div>
+                                                <div class="slide">
+                                                        <h1>Stay home</h1>
+                                                <p>as isolation is key to avoid the spread of covid-19</p>
+                                                </div>
+                                        </div>
+                                        <div class="slider-btn">
+                                                <a href="#" class="prev">
+                                                        <!-- <i class="fa fa-angle-left"></i> -->
+                                                </a>
+                                                <a href="#" class="next">
+                                                        <!-- <i class="fa fa-angle-right"></i> -->
+                                                </a>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- SECTION 5 -->
+
+                <section>
+                        <div class="athird_div" >
+                        </div>
+                </section>
+
+
+
+
+                <section>
+                        <div class="support_athird_pill">
+                                <div class="athird_pill">
+                                        <h2> DO YOU HAVE</h2>
+                                        <h2> OR EXIHIBIT ANY SYMPTOMS</h2>
+                                        <h2> OF COVID-19</h2>
+                                        <h2> click if no</h2>
+
+                                        <% if(!currentUser){ %>
+                                                <p class="numm" style="color: white;"><%= count.length %></p>
+                                                <a href="/login">
+                                                <input type="button" value="click me"  class="finebutton forathirdpill"/>
+                                                </a>
+
+
+                                                <!-- <% console.log("this is the count['positive'] " + count["positive"])   %>
+                                                
+                                                <% console.log("this is the count.positive " + count.positive)   %> -->
+
+                                                
+                                        <% } else { %>
+                                        <form action="/pos" method="POST">
+                                                <input type="text" name="username" value="<%= currentUser.username %>" style="opacity: 0;">
+                                                <input type="text" name="positive" value="<%= currentUser.username %>" style="opacity: 0;">
+                                                <p class="numm" style="color: white;"><%= count.length %></p>
+ 
+                                                <a href="/">
+                                                <input type="submit" value="click me" class="finebutton forathirdpill"/>
+                                                </a>
+
+                                        </form>
+                                        <% } %>
+                                </div>
+                        </div>
+                </section>
+
+                
+
+                <!-- SECTION 7 -->
+
+
+                <section>
+                        <div class="athird_ill">
+                                
+                                <h2> click if YES </h2>
+                                <p>
+                                                <% if(!currentUser){ %>
+                                                        <p class="numm yes"><%= negcount.length %></p>
+                                                        <a href="/login">
+                                                                <input type="button" value="click me"  class="ui red basic button"/>
+                                                        </a>
+                                                        <a href="tel:080097000010" class="ui red button">
+                                                                call ncdc
+                                                        </a>
+                                                <% } else { %>
+                                                <form action="/neg" method="POST">
+                                                        <input type="text" name="username" value="<%= currentUser.username %>" style="opacity: 0;">
+                                                        <input type="text" name="positive" value="<%= currentUser.username %>" style="opacity: 0;">
+                                                        <p class="numm yes"><%= negcount.length %></p>
+         
+                                                        <a>
+                                                        <input type="submit" value="click me" class="ui red basic button">
+                                                        </a>
+                                                        
+                                                        <a href="tel:080097000010" class="ui red button">
+                                                                call ncdc
+                                                        </a>
+        
+                                                </form>
+                                                
+                                                <% } %>
+
+                                </p>
+                        </div>
+                </section>
+
+                <section>
+                        <div class="fourth_div">
+                                <div class="row">
+                                        <div class="col-lg-6">
+                                                <h2>ABOUT COVID-19</h2>
+                                                By world health Organization:
+                                                <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+
+                                                        Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes,
+                                                         chronic respiratory disease, and cancer are more likely to develop serious illness.
+                                                        
+                                                        The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. 
+                                                        
+                                                        The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+                                                        
+                                                        At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.
+                                                </p>
+                                        </div>
+                                </div>
+                        </div>
+                
+                </section>
+                <!-- SECTION 9 -->
+                
+
+    <section class="footer_section">
+        <footer>
+                <div>
+                        <p>© 2020 developed by <span>Olabisi</span></p>
+                </div>
+                <div> 
+                        <a href="https://www.instagram.com/odun_olaa/" target="_blank">
+                                <i class="instagram icon"></i>
+                        </a>
+                        <a href="https://twitter.com/OlabisiOdunayo6" target="_blank">
+                                <i class="twitter icon"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                                <i class="whatsapp icon"></i>
+                        </a>
+                </div>
+                <div>
+                        <p>Proudly created for covid-19 - <span>(web illustratons from <a href="https://undraw.co/illustrations" target="_blank">undraw.co</a>)</span></p>
+                </div>
+        </footer>
+
+</section>
+
+
+<section style="display: none;">
+        <span id="one">
+                <%= states[0] %>
+        </span>
+        <span id="two">
+                <%= states[1] %>
+        </span>
+        <span id="three">
+                <%= states[2] %>
+        </span>
+        <span id="four">
+                <%= states[3] %>
+        </span>
+        <span id="five">
+                <%= states[4] %>
+        </span>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script>
+                        function onClickMenu(){	
+                        document.getElementById("menu").classList.toggle("change");	
+                        document.getElementById("navV").classList.toggle("change");		
+                        document.getElementById("menu-bg").classList.toggle("change-bg");
+                        }
+                </script>	
+
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                <script src="fpart/js/carousel.js"></script>
+                <script type="text/javascript" src="fpart/js/ham.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+				
+                                <script > 
+                                        console.log("the script tag isnt working");
+                                        console.log("this is the one inside a script tag:::::: " + states);
+				</script>
+				
+				
+				<script>
+                                  var result = document.getElementById('one').textContent;
+                                  var result1 = document.getElementById('two').textContent;
+                                  var result2 = document.getElementById('three').textContent;
+                                  var result3 = document.getElementById('four').textContent;
+                                  var result4 = document.getElementById('five').textContent;
+                                  
+
+
+                                  const div = document.createElement('div');
+                                  div.innerText = `<%= cc_states[0]  %>`
+                                  var som = div.innerText.split(',').join("");
+                                  var me = parseInt(som);
+
+                                  const div1 = document.createElement('div');
+                                  div1.innerText = `<%= cc_states[1]  %>`
+                                  var som1 = div1.innerText.split(',').join("");
+                                  var me1 = parseInt(som1);
+
+                                const div2 = document.createElement('div');
+                                div2.innerText = `<%= cc_states[2]  %>`
+                                var som2 = div2.innerText.split(',').join("");
+                                var me2 = parseInt(som2);
+
+                                const div3 = document.createElement('div');
+                                div3.innerText = `<%= cc_states[3]  %>`
+                                var som3 = div3.innerText.split(',').join("");
+                                var me3 = parseInt(som3);
+
+                                const div4 = document.createElement('div');
+                                div4.innerText = `<%= cc_states[4]  %>`
+                                var som4 = div4.innerText.split(',').join("");
+                                var me4 = parseInt(som4);
+
+                                  
+
+
+                                const div11 = document.createElement('div');
+                                  div11.innerText = `<%= dc_states[0]  %>`
+                                  var som11 = div11.innerText.split(',').join("");
+                                  var me11 = parseInt(som11);
+
+                                  const div12 = document.createElement('div');
+                                  div12.innerText = `<%= dc_states[1]  %>`
+                                  var som12 = div12.innerText.split(',').join("");
+                                  var me12 = parseInt(som12);
+
+                                const div13 = document.createElement('div');
+                                div13.innerText = `<%= dc_states[2]  %>`
+                                var som13 = div13.innerText.split(',').join("");
+                                var me13 = parseInt(som13);
+
+                                const div14 = document.createElement('div');
+                                div14.innerText = `<%= dc_states[3]  %>`
+                                var som14 = div14.innerText.split(',').join("");
+                                var me14 = parseInt(som14);
+
+                                const div15 = document.createElement('div');
+                                div15.innerText = `<%= dc_states[4]  %>`
+                                var som15 = div15.innerText.split(',').join("");
+                                var me15 = parseInt(som15);
+
+                                  
+
+
+                                const div21 = document.createElement('div');
+                                div21.innerText = `<%= rc_states[0]  %>`
+                                var som21 = div21.innerText.split(',').join("");
+                                var me21 = parseInt(som21);
+
+                                const div22 = document.createElement('div');
+                                div22.innerText = `<%= rc_states[1]  %>`
+                                var som22 = div22.innerText.split(',').join("");
+                                var me22 = parseInt(som22);
+
+                                const div23 = document.createElement('div');
+                                div23.innerText = `<%= rc_states[2]  %>`
+                                var som23 = div23.innerText.split(',').join("");
+                                var me23 = parseInt(som23);
+
+                                const div24 = document.createElement('div');
+                                div24.innerText = `<%= rc_states[3]  %>`
+                                var som24 = div24.innerText.split(',').join("");
+                                var me24 = parseInt(som24);
+
+                                const div25 = document.createElement('div');
+                                div25.innerText = `<%= rc_states[4]  %>`
+                                var som25 = div25.innerText.split(',').join("");
+                                var me25 = parseInt(som25);
+
+
+
+                                  
+				  new Chart(document.getElementById("bar-chart"), {
+				  type: 'horizontalBar',
+					tooltips: {
+							mode: 'index',
+					},
+					  data: {
+						labels: [result,result1,result2,result3,result4],
+						datasets: [
+						  {
+							data: [me,me1,me2,me3,me4],
+							label: 'cases',
+							backgroundColor: "navy",
+						  }, {
+							data: [me11,me12,me13,me14,me15],
+							label: 'deaths',
+							backgroundColor: "red",
+						  }
+								  , {
+							data: [me21,me22,me23,me24,me25],
+							label: 'recovered',
+							backgroundColor: "green",
+						  }
+						],
+					  },
+					  backgroundColor:'#cfcfcf',
+					  options: {
+							scales: {
+						  xAxes: [{ stacked: true }],
+						  yAxes: [{ stacked: true }]
+						}
+
+					  }
+							
+				}
+				);
+
+</script>
+
+
+
+
+
+
+
+        </body>
+</html>

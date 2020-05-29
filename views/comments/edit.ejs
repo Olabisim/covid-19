@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="navy" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 FOR NIGERIANS</title>	
+  <link rel="stylesheet" href="../../../../fpart/css/posts/new.css">	
+  <style>
+  .textbox input {
+    font-size: 12px;
+}.hait {
+    height: 100px;
+}
+  </style>
+</head>
+<body>
+  
+<div class="container">
+    <% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert">
+            <%= error %>
+    </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+            <%= success %>
+    </div>
+    <% } %>
+</div>
+
+
+
+<div class="login-box">
+  <h1>Edit comment</h1>
+  
+  <form action="/posts/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+
+    
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <textarea type="text" class="comment-style hait" name="comment[text]"><%= comment.text %></textarea>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block " type="submit">Submit</button>
+  </form>
+  <a href="/posts/<%= campground_id %>">Go Back </a>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

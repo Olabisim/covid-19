@@ -1,0 +1,288 @@
+
+<html>	
+    <head>		
+        <meta name="theme-color" content="navy" />
+            <link rel="stylesheet" href="../fpart/css/ham.css" type="text/css">		
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+            <link rel="stylesheet" href="../fpart/css/posts/show.css">	
+            <title>COVID-19 FOR NIGERIANS</title>	
+            <style type="text/css">
+            </style>
+    </head>	
+    
+    <body>	
+            <!-- SECTION 1 -->
+            <section>
+                    <div class="row animated-fast1 fadeInUp animate-box">
+                            <div class="col-sm-8 borde-left">
+                                <div class="first_div" id="parallax1" style="background-image: linear-gradient( rgb(0, 0, 128, 0.0), rgb(0, 0, 128, 0.0)),url(../fpart/full/posts.png);">
+                                            <section>
+            
+                                                    <div id="menu-bar">			
+                                                            <div id="menu" onclick="onClickMenu()">				
+                                                                    <div id="bar1" class="bar"></div>				
+                                                                    <div id="bar2" class="bar"></div>				
+                                                                    <div id="bar3" class="bar"></div>			
+                                                            </div>			
+                                                            <ul class="navV" id="navV">				
+                                                                    <li><a href="/">Home</a></li>				
+                                                                    <li><a href="/posts">posts</a></li>			
+                                                            </ul>		
+                                                    </div>		
+                                                    <div class="menu-bg" id="menu-bg"></div>
+                                            </section>		
+                                            
+                                    </div>          
+                            </div>
+                            <div class="col-sm-4">                                                             
+                                    <div class="second" >
+                                            <p id="home-slide1">
+                                                    FIRST 
+                                            </p>
+                                            <p id="home-slide2">
+                                                    POST 
+                                            </p>
+                                            <p id="home-slide3">
+                                                    FOR
+                                            </p>
+                                            <p id="home-slide4">
+                                                    COVID-19
+                                            </p>
+                                    </div>
+                            </div>
+                    </div> 
+            </section>	
+
+            <div class="ui fixed inverted menu">
+                <div class="ui container">
+                    <div class="header item"><i class="fire icon"></i>Nicov</div>
+                    <% if(!currentUser){ %>
+                            <a href="/login" class="item">Login</a>
+                            <a href="/register" class="item">Sign up for a pro account</a>
+                    <% } else { %>
+                            <a href="#" class="item">
+                                <i class="user icon"></i> <%= currentUser.username %>
+                            </a>
+                            <a href="/logout" class="item">Logout</a>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- SECTION 2 -->
+            
+
+                <div style="margin-bottom: 7em; margin: auto; justify-content: center;">
+                    <div class="col-md-6 sett" style="display: block;">
+                        <div class="thumbnail" style="text-align: center;">
+                            <h2 class="upp"><a><%=campground.name%></a></h2>
+                            <hr/>
+                            <img class="img-responsive circle" id="toggle" src="<%=campground.image%>" onclick="onClickFace()">
+                            <div class="caption-full">
+                                <p class="margin-desc"><%=campground.description%></p>
+                                <p>
+                                    <em>created by <%= campground.author.username %></em>
+                                </p>
+                                <hr/>
+                                <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                                    <a class="ui basic button blue" href="/posts/<%= campground._id %>/edit">Edit</a>
+                                    <form id="form" action="/posts/<%= campground._id %>?_method=DELETE" method="POST">
+                                        <button class="ui basic button red"><i class="trash alternate icon"></i></button>
+                                    </form>
+                                <% } %>
+                                <!-- i want to add the like button on top is that okay yes -->
+                                
+
+                                <form action="/posts/<%= campground._id %>/comments/likes" method="POST"> 
+                                            <% if(!currentUser){ %>
+                                                <input type="text" name="Like[like]" value="wontwork" style="opacity: 0; display:block;">
+                                                <!-- <a href="/login" style="display: block;"> -->
+                                                <button type="submit" style="background: none;border: none;">
+                                                    <div class="ui labeled button" tabindex="0" style="display: -webkit-box;">
+                                                        <% if(campground.likes.length == 0 || campground.likes.length == 1){ %>
+                                                                <div class="ui red button">
+                                                                        <i class="heart icon"></i> Like
+                                                                </div>
+                                                                <a class="ui basic red left pointing label">
+                                                                        <%= campground.likes.length %>
+                                                                </a>
+                                                        <% }else { %>
+                                                                <div class="ui red button">
+                                                                        <i class="heart icon"></i> Likes
+                                                                </div>
+                                                                <a class="ui basic red left pointing label">
+                                                                        <%= campground.likes.length %>
+                                                                </a>
+                                                        <% } %>
+                                                    </div>
+                                                </button>
+                                            <% } else { %>
+                                                <input type="text" name="Like[like]" value="<%= currentUser.username %>" style="opacity: 0; display:block;">
+                                                <!-- <a href="/login" style="display: block;"> -->
+                                                <button type="submit" style="background: none;border: none;">
+                                                    <div class="ui labeled button" tabindex="0" style="display: -webkit-box;">
+                                                        <% if(campground.likes.length == 0 || campground.likes.length == 1){ %>
+                                                                <div class="ui red button">
+                                                                        <i class="heart icon"></i> Like
+                                                                </div>
+                                                                <a class="ui basic red left pointing label">
+                                                                        <%= campground.likes.length %>
+                                                                </a>
+                                                        <% }else { %>
+                                                                <div class="ui red button">
+                                                                        <i class="heart icon"></i> Likes
+                                                                </div>
+                                                                <a class="ui basic red left pointing label">
+                                                                        <%= campground.likes.length %>
+                                                                </a>
+                                                        <% } %>
+                                                    </div>
+                                                </button>
+                                            <% } %>
+                                    <!-- </a> -->
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <% if(error && error.length > 0){ %>
+                            <div class="alert alert-danger" role="alert">
+                                <i class="bell slash outline icon"></i>
+                                    <%= error %>
+                            </div>
+                            <% } %>
+                            <% if(success && success.length > 0){ %>
+                            <div class="alert alert-success" role="alert">
+                                <i class="bell outline icon"></i>
+                                    <%= success %>
+                            </div>
+                            <% } %>
+
+                        <p class="lead upp" style="font-weight: 700;">Comments</p>
+                        
+                        <div class="well" >
+                            <div class="text-right">
+                                <div style="width: 100%; margin: 25px auto;">
+
+                                    <form action="/posts/<%= campground._id %>/comments" method="POST">
+                                        <div class="form-group">
+                                            <% if(!currentUser){ %>
+                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: navy; border: 2px solid #0000b3;" placeholder="type your comments here">
+                                            <% } else { %>
+                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: navy; border: 2px solid #0000b3;" placeholder="type your comment as <%= currentUser.username %>">
+                                            <% } %>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="ui basic button pink" type="submit" style="border: 2px solid #ff6680;"><i class="location arrow icon"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                            
+                            <% for (var i = campground.comments.length-1; i >= 0; i--) { %>
+                                <% var comment = campground.comments[i]; %> 
+                                <div class="row" style="padding-bottom: 20px;">
+                                    <div class="col-md-12">
+                                        <strong><%= comment.author.username %></strong>
+                                        <span class="pull-right"></span> 
+                                        <p class="comment-style">
+                                            <%= comment.text %>
+                                        </p>
+                                        
+                                    <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                        <a class="ui basic button blue" 
+                                           href="/posts/<%=campground._id %>/comments/<%= comment._id%>/edit">
+                                           Edit
+                                        </a>
+                                        <form id="form" action="/posts/<%=campground._id %>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+                                            <button class="ui basic button red"><i class="trash alternate icon"></i></button>
+                                        </form>
+                                    <% } %>
+                                    </div>  
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+        
+            <!-- SECTION 3 -->
+
+            <!-- SECTION 4 -->
+
+            <!-- SECTION 8 -->
+
+            <!-- SECTION 9 -->
+
+            
+
+
+
+
+            <section class="footer_section">
+                <footer>
+                        <div>
+                                <p>© 2020 developed by <span>Olabisi</span></p>
+                        </div>
+                        <div> 
+                                <a href="https://www.instagram.com/odun_olaa/" target="_blank">
+                                        <i class="instagram icon"></i>
+                                </a>
+                                <a href="https://twitter.com/OlabisiOdunayo6" target="_blank">
+                                        <i class="twitter icon"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                        <i class="whatsapp icon"></i>
+                                </a>
+                        </div>
+                        <div>
+                                <p>Proudly created for covid-19 - <span>(web illustratons from <a href="https://undraw.co/illustrations" target="_blank">undraw.co</a>)</span></p>
+                        </div>
+                </footer>
+        
+            </section>
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+                    function onClickMenu(){	
+                    document.getElementById("menu").classList.toggle("change");	
+                    document.getElementById("navV").classList.toggle("change");		
+                    document.getElementById("menu-bg").classList.toggle("change-bg");
+                    }
+            </script>	
+
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            
+            <script>
+                
+                function onClickFace(){	
+
+                        document.getElementById("toggle").classList.toggle("toggle");
+                    
+                }
+            </script>
+
+
+  </script>
+    </body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="navy" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../fpart/css/posts/new.css">	
+  <title>COVID-19 FOR NIGERIANS</title>	
+  <style>
+  </style>
+</head>
+<body>
+  
+<div class="container">
+    <% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert">
+            <%= error %>
+    </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+            <%= success %>
+    </div>
+    <% } %>
+</div>
+
+
+
+<div class="login-box">
+  <h1>New Content for Covid-19</h1>
+  
+  <form action="/posts/<%= campground._id %>?_method=PUT" method="POST">
+
+    <div class="textbox">
+            <input type="text" class="saiz comment-style" name="campground[name]" value="<%= campground.name %>">
+    </div>
+
+    <div class="textbox">
+            <input type="text" class="comment-style saiz" name="campground[image]" value="<%= campground.image %>">
+    </div>
+
+    <div class="textbox">
+            <textarea type="text" class="comment-style hait" name="campground[description]"><%= campground.description%></textarea>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block " type="submit">Submit</button>
+</form>
+
+  <a href="/posts">Go Back </a>
+
+</div>
+</body>
+</html>
+
