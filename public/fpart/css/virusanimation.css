@@ -7,7 +7,7 @@
 .insampu {
         height: 5px;
         width: 5px;
-        background: white;
+        background: navy;
         border-radius: 50%;
 }
 .insampu:nth-of-type(1) {

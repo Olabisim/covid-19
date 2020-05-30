@@ -71,7 +71,7 @@ document.addEventListener('scroll', () => {
         else if (yoff > MOUNT_SCALE_END){
                 sampup.style.transition = `all 0.5s ease`;
                 sampup.style.transform = `translate(170px, 860px)`;
-                sampup.style.backgroundColor = `navy`;
+                sampup.style.backgroundColor = `white`;
                 sampup.style.height = `50px`;
                 sampup.style.width = `50px`;
                 sampup.style.borderRadius = `50%`;

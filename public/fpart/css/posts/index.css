@@ -6,7 +6,6 @@ footer div:nth-of-type(2) i{
 .first_div {
         border-right: 1px solid navy;
     }
-
 img{
         width: 100%;
 }
@@ -41,9 +40,6 @@ img{
 .uiprobs {
         margin-top: 6em;
         width: 50%;
-}
-.bar {
-        background-color: white;
 }
 .ui.inverted.menu {
         background-color: navy;
