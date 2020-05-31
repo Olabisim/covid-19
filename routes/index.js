@@ -228,6 +228,10 @@ router.get("/logout", function(req,res){
 router.get("/about", function(req, res){
     res.render("about");
 })
+
+router.get("/animation", function(req, res){
+    res.render("animation");
+})
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){
