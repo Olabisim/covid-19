@@ -28,13 +28,14 @@ var commentRoutes = require("./routes/comments"),
 
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+//mongoose.connect("mongodb://localhost/covid", { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
 app.use(methodOverride("_method"));
-5
+
 app.use(flash());
 
 const PORT = process.env.PORT || 3000;      
