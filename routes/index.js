@@ -225,7 +225,9 @@ router.get("/logout", function(req,res){
     res.redirect("/posts");
 })
 
-
+router.get("/about", function(req, res){
+    res.render("about");
+})
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){
