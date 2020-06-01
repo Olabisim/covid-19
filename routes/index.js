@@ -229,7 +229,7 @@ router.get("/about", function(req, res){
     res.render("about");
 })
 
-router.get("/animation", function(req, res){
+router.get("/animations", function(req, res){
     res.render("animation");
 })
 // //middleware

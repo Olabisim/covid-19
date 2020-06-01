@@ -108,7 +108,7 @@
                                 <div class="row animated-fast1 fadeInUp animate-box">
                                         <div class="col-lg-12 col-sm-12" >
                                                 <h2 id="worldwide">WORLD-WIDE</h2>
-                                                <div class="world general">
+                                                <div class="world general" id="test">
                                                         <div class="spec_num">
                                                                 <p>Confirmed Cases</p>
                                                                 <h2 class="counter"><%= data_one["confirmed"]["value"] %></h2>
@@ -239,7 +239,7 @@
                                         <canvas id="bar-chart"></canvas>
                                 </div>
                                 <div style="text-align: right;">
-                                        <a href="/overall" class="ui black basic button">show more
+                                        <a href="/overall" class="ui navy basic button" style="border: 2px solid navy;font-weight: 900;">show more
 						<i class="chevron right icon"></i></a>
                                 </div>
                         </div>
@@ -302,10 +302,9 @@
                 <section>
                         <div class="support_athird_pill">
                                 <div class="athird_pill">
-                                        <h2> DO YOU HAVE</h2>
-                                        <h2> OR EXIHIBIT ANY SYMPTOMS</h2>
+                                        <h2>CLICK IF NO</h2>
+                                        <h2> SIGNS OR SYMPTOMS</h2>
                                         <h2> OF COVID-19</h2>
-                                        <h2> click if no</h2>
 
                                         <% if(!currentUser){ %>
                                                 <p class="numm" style="color: white;"><%= count.length %></p>

@@ -195,6 +195,7 @@ p#home-slide4 {
 }
 .second_div .general p{
     margin-bottom: 0rem;
+    font-weight: 900;
 }
 .second_div .world div h2{
     letter-spacing: 2px;
@@ -310,14 +311,14 @@ border-radius: 5%;
     width: 100%;
     height: 200px;
     background-color: white;
-    padding-top: 20px;
+    padding-top: 100px;
 }
 .pre_carousel_note h2{
     color: navy;
-    padding-top: 20px;
     font-size: 23px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
 }
 .carousel_div {
     width: 100%;
@@ -399,18 +400,22 @@ section:nth-of-type(6){
 .athird_pill span{
     color: navy;
 }
+.athird_pill h2:nth-of-type(1){
+    padding-top: 80px;
+}
 .athird_pill h2{
     font-size: 18px;
     font-weight: 700;
     color: white;
     padding-top: 30px;
+    word-spacing: 6px;
 }
 #demo1 {
     color: navy;
 }
 .numm {
     font-weight: 900;
-    font-size: 30px;
+    font-size: 36px;
 }
 .yes {
     color: red; 
