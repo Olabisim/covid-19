@@ -95,8 +95,8 @@
                                 <div class="chart_purpose">
                                 </div>
                                 <div class="adjuss"></div>
-                                <div style="height: 700px; padding-top: 70px;">
-                                        <canvas id="bar2-chart"></canvas>
+                                <div style="height: 700px; padding-top: 70px; width: 90%;">
+                                        <canvas id="pie-chart"></canvas>
                                 </div>
                         </div>
                 </section>
@@ -270,42 +270,150 @@
                 <% console.log("this is the dc_states" + dc_states) %>
                 <script>
                         
-                                var r = document.getElementById('one').textContent;
-                                var r1 = document.getElementById('two').textContent;
-                                var r2 = document.getElementById('three').textContent;
-                                var r3 = document.getElementById('four').textContent;
-                                var r4 = document.getElementById('five').textContent;
-                                var r5 = document.getElementById('six').textContent;
-                                var r6 = document.getElementById('seven').textContent;
-                                var r7 = document.getElementById('eight').textContent;
-                                var r8 = document.getElementById('nine').textContent;
-                                var r9 = document.getElementById('ten').textContent;
-                                var r10 = document.getElementById('a').textContent;
-                                var r11 = document.getElementById('b').textContent;
-                                var r12 = document.getElementById('c').textContent;
-                                var r13 = document.getElementById('d').textContent;
-                                var r14 = document.getElementById('e').textContent;
-                                var r15 = document.getElementById('f').textContent;
-                                var r16 = document.getElementById('g').textContent;
-                                var r17 = document.getElementById('h').textContent;
-                                var r18 = document.getElementById('i').textContent;
-                                var r19 = document.getElementById('j').textContent;
-                                var r20 = document.getElementById('k').textContent;
-                                var r21 = document.getElementById('l').textContent;
-                                var r22 = document.getElementById('m').textContent;
-                                var r23 = document.getElementById('n').textContent;
-                                var r24 = document.getElementById('o').textContent;
-                                var r25 = document.getElementById('p').textContent;
-                                var r26 = document.getElementById('q').textContent;
-                                var r27 = document.getElementById('r').textContent;
-                                var r28 = document.getElementById('s').textContent;
-                                var r29 = document.getElementById('t').textContent;
-                                var r30 = document.getElementById('u').textContent;
-                                var r31 = document.getElementById('v').textContent;
-                                var r32 = document.getElementById('w').textContent;
-                                var r33 = document.getElementById('x').textContent;
-                                var r34 = document.getElementById('y').textContent;
-                                var r35 = document.getElementById('z').textContent;
+                                const divr = document.createElement('div');
+                                divr.innerText =  `<%= states[0]  %>`;
+                                var r = divr.innerText;
+                                
+                                const divr1 = document.createElement('div');
+                                divr1.innerText =  `<%= states[1]  %>`;
+                                var r1 = divr1.innerText;
+                                
+                                const divr2 = document.createElement('div');
+                                divr2.innerText =  `<%= states[2]  %>`;
+                                var r2 = divr2.innerText;
+                                
+                                const divr3 = document.createElement('div');
+                                divr3.innerText =  `<%= states[3]  %>`;
+                                var r3 = divr3.innerText;
+                                
+                                const divr4 = document.createElement('div');
+                                divr4.innerText =  `<%= states[4]  %>`;
+                                var r4 = divr4.innerText;
+                                
+                                const divr5 = document.createElement('div');
+                                divr5.innerText =  `<%= states[5]  %>`;
+                                var r5 = divr5.innerText;
+                                
+                                const divr6 = document.createElement('div');
+                                divr6.innerText =  `<%= states[6]  %>`;
+                                var r6 = divr6.innerText;
+                                
+                                const divr7 = document.createElement('div');
+                                divr7.innerText =  `<%= states[7]  %>`;
+                                var r7 = divr7.innerText;
+                                
+                                const divr8 = document.createElement('div');
+                                divr8.innerText =  `<%= states[8]  %>`;
+                                var r8 = divr8.innerText;
+                                
+                                const divr9 = document.createElement('div');
+                                divr9.innerText =  `<%= states[9]  %>`;
+                                var r9 = divr9.innerText;
+                                
+                                const divr10 = document.createElement('div');
+                                divr10.innerText =  `<%= states[10]  %>`;
+                                var r10 = divr10.innerText;
+                                
+                                const divr11 = document.createElement('div');
+                                divr11.innerText =  `<%= states[11]  %>`;
+                                var r11 = divr11.innerText;
+                                
+                                const divr12 = document.createElement('div');
+                                divr12.innerText =  `<%= states[12]  %>`;
+                                var r12 = divr12.innerText;
+                                
+                                const divr13 = document.createElement('div');
+                                divr13.innerText =  `<%= states[13]  %>`;
+                                var r13 = divr13.innerText;
+                                
+                                const divr14 = document.createElement('div');
+                                divr14.innerText =  `<%= states[14]  %>`;
+                                var r14 = divr14.innerText;
+                                
+                                const divr15 = document.createElement('div');
+                                divr15.innerText =  `<%= states[15]  %>`;
+                                var r15 = divr15.innerText;
+                                
+                                const divr16 = document.createElement('div');
+                                divr16.innerText =  `<%= states[16]  %>`;
+                                var r16 = divr16.innerText;
+                                
+                                const divr17 = document.createElement('div');
+                                divr17.innerText =  `<%= states[17]  %>`;
+                                var r17 = divr17.innerText;
+                                
+                                const divr18 = document.createElement('div');
+                                divr18.innerText =  `<%= states[18]  %>`;
+                                var r18 = divr18.innerText;
+                                
+                                const divr19 = document.createElement('div');
+                                divr19.innerText =  `<%= states[19]  %>`;
+                                var r19 = divr19.innerText;
+                                
+                                const divr20 = document.createElement('div');
+                                divr20.innerText =  `<%= states[20]  %>`;
+                                var r20 = divr20.innerText;
+                                
+                                const divr21 = document.createElement('div');
+                                divr21.innerText =  `<%= states[21]  %>`;
+                                var r21 = divr21.innerText;
+                                
+                                const divr22 = document.createElement('div');
+                                divr22.innerText =  `<%= states[22]  %>`;
+                                var r22 = divr22.innerText;
+                                
+                                const divr23 = document.createElement('div');
+                                divr23.innerText =  `<%= states[23]  %>`;
+                                var r23 = divr23.innerText;
+                                
+                                const divr24 = document.createElement('div');
+                                divr24.innerText =  `<%= states[24]  %>`;
+                                var r24 = divr24.innerText;
+                                
+                                const divr25 = document.createElement('div');
+                                divr25.innerText =  `<%= states[25]  %>`;
+                                var r25 = divr25.innerText;
+                                
+                                const divr26 = document.createElement('div');
+                                divr26.innerText =  `<%= states[26]  %>`;
+                                var r26 = divr26.innerText;
+                                
+                                const divr27 = document.createElement('div');
+                                divr27.innerText =  `<%= states[27]  %>`;
+                                var r27 = divr27.innerText;
+                                
+                                const divr28 = document.createElement('div');
+                                divr28.innerText =  `<%= states[28]  %>`;
+                                var r28 = divr28.innerText;
+                                
+                                const divr29 = document.createElement('div');
+                                divr29.innerText =  `<%= states[29]  %>`;
+                                var r29 = divr29.innerText;
+                                
+                                const divr30 = document.createElement('div');
+                                divr30.innerText =  `<%= states[30]  %>`;
+                                var r30 = divr30.innerText;
+                                
+                                const divr31 = document.createElement('div');
+                                divr31.innerText =  `<%= states[31]  %>`;
+                                var r31 = divr31.innerText;
+                                
+                                const divr32 = document.createElement('div');
+                                divr32.innerText =  `<%= states[32]  %>`;
+                                var r32 = divr32.innerText;
+                                
+                                const divr33 = document.createElement('div');
+                                divr33.innerText =  `<%= states[33]  %>`;
+                                var r33 = divr33.innerText;
+                                
+                                const divr34 = document.createElement('div');
+                                divr34.innerText =  `<%= states[34]  %>`;
+                                var r34 = divr34.innerText;
+                                
+                                const divr35 = document.createElement('div');
+                                divr35.innerText =  `<%= states[35]  %>`;
+                                var r35 = divr35.innerText;
+                                
                                   
 
 
@@ -1006,7 +1114,7 @@
                       
                       
                           
-                        new Chart(document.getElementById("bar2-chart"), {
+                        new Chart(document.getElementById("pie-chart"), {
                           type: 'pie',
                         tooltips: {
                                 mode: 'index',
