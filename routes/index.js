@@ -232,6 +232,10 @@ router.get("/about", function(req, res){
 router.get("/animations", function(req, res){
     res.render("animation");
 })
+
+router.get("/ctest", function(req, res){
+    res.render("ctest");
+})
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){

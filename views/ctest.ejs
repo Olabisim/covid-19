@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3aafa9" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            font-family: arial;
+            text-align: right;
+            overflow-x: hidden;
+
+        }
+
+#container{
+    margin : 20px auto;
+    height: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+#start{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 15px 30px;
+    color: white;
+    background: #3aafa9;
+    text-transform: uppercase;
+    border-top-left-radius: 50px 50px;
+    border-bottom-left-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    border-bottom-right-radius: 50px 50px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    margin: auto;
+    font-weight: 900;
+}
+#start:hover{
+}
+
+
+#question{
+    width:500px;
+    height : 125px;
+}
+#question p{
+    color: white;
+    font-weight: bold;
+    margin : 0;
+    padding : 15px;
+    font-size: 2em;
+}
+
+#choices{
+    width : 480px;
+    padding : 10px
+}
+.choice{
+    display: inline-block;
+    width : 350px;
+    text-align: center;
+    border : 2px solid white;
+    border-top-left-radius: 50px 50px;
+    border-bottom-left-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    border-bottom-right-radius: 50px 50px;
+    cursor: pointer;
+    padding : 25px;
+    margin: 10px;
+    display: block;
+    color: white;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+#counter{
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
+#progress{
+    width : 500px;
+    padding:5px;
+    text-align: right;
+}
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+#scoreContainer{
+    margin : 20px auto;
+    background-color: white;
+    opacity: 0.8;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+#scoreContainer img{
+}
+#scoreContainer p{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 760px){
+    
+    #start{
+        letter-spacing: 2px;
+        position: relative;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        overflow: hidden;
+        margin: 100px 30px 30px 30px;
+        font-weight: 900;
+        color: black
+    }
+
+    #question{
+        height : 125px;
+        width: 100%;
+        text-align: center;
+    }
+    #question p{
+        color: #3aafa9;
+        font-weight: bold;
+        margin : 0;
+        padding : 15px;
+        padding: 15px 30px;
+        font-size: 22px;
+        text-shadow: 0px 1px black;
+    }
+    #choices{
+        margin: auto;
+        border-top: 2px solid #3aafa9;
+        border-bottom: 2px solid #3aafa9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .choice{
+        display: inline-block;
+        text-align: center;
+        border-top-left-radius: 50px 50px;
+        border-bottom-left-radius: 50px 50px;
+        border-top-right-radius: 50px 50px;
+        border-bottom-right-radius: 50px 50px;
+        cursor: pointer;
+        padding : 10px;
+        margin: auto 10px 10px 10px 10px;
+        display: block;
+        color: #3aafa9;
+        text-shadow: 0px 1px black;
+        background-color: white;
+        width: 300px;
+        justify-content: center;
+        border: 1px solid black;
+        font-weight: 900;
+        transition: 0.3s;
+    }
+    .choice:hover {
+        border: none;
+        background-color: #3aafa9;
+        text-shadow: none;
+    }
+    #progress{
+        width : 300px;
+        padding: 5px;
+        text-align:center;
+        margin: auto;
+    }
+    .prog{
+        width : 25px;
+        height : 25px;
+        border: 1px solid #000;
+        display: inline-block;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    hr {
+        background-color: #ccc;
+        color: black;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        height: 7px;
+    }
+    #scoreContainer{
+        margin : 20px auto;
+        background-color: #3aafa9;
+        opacity: 0.8;
+        height: 300px;
+        width : 300px;
+        border-radius: 5px;
+        position: relative;
+        display: none;
+    }
+    #scoreContainer img{
+    }
+    #scoreContainer p{
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        margin: auto;
+        width: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: left;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">×</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div>
+
+
+
+
+    <div id="container">
+        <div id="start">NAME's test!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+
+
+
+
+
+            <hr/>
+            <div id="choices">
+                <div class="choice" id="best" onclick="checkAnswer('best')"></div>
+                <div class="choice" id="good" onclick="checkAnswer('good')"></div>
+                <div class="choice" id="medium" onclick="checkAnswer('medium')"></div>
+                <div class="choice" id="bad" onclick="checkAnswer('bad')"></div>
+                <div class="choice" id="worst" onclick="checkAnswer('worst')"></div>
+            </div>
+            <hr/>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+
+        
+<button id="myBtn">Open Modal</button>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const start = document.getElementById("start");
+const quiz = document.getElementById("quiz");
+const question = document.getElementById("question");
+const choiceA = document.getElementById("best");
+const choiceB = document.getElementById("good");
+const choiceC = document.getElementById("medium");
+const choiceD = document.getElementById("bad");
+const choiceE = document.getElementById("worst");
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
+const scoreDiv = document.getElementById("myModal");
+
+// create our questions
+let questions = [
+    {
+        question : "What does HTML stand for What does HTML stand for What does HTML stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "best"
+    },{
+        question : "What does CSS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "good"
+    },{
+        question : "What does JS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "medium"
+    },{
+        question : "What does JS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "bad"
+    },{
+        question : "What does JS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "worst"
+    },{
+        question : "What does JS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "worst"
+    },{
+        question : "What does JS stand for?",
+        choiceA : "Best",
+        choiceB : "good",
+        choiceC : "medium",
+        choiceD : "bad",
+        choiceE : "worst",
+        correct : "worst"
+    }
+];
+
+// create some variables
+
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+let count = 0;
+const questionTime = 10; // 10s
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
+let TIMER;
+let score = 0;
+
+// render a question
+function renderQuestion(){
+    let q = questions[runningQuestion];
+    
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
+    choiceE.innerHTML = q.choiceE;
+}
+
+start.addEventListener("click",startQuiz);
+
+// start quiz
+function startQuiz(){
+    start.style.display = "none";
+    renderQuestion();
+    quiz.style.display = "block";
+    renderProgress();
+    renderCounter();
+    TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+}
+
+// render progress
+function renderProgress(){
+    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// checkAnwer
+//if answer equals best score + 10
+function checkAnswer(answer){
+    if( answer == 'best'){
+        // answer is correct
+        score++;
+        // change progress color to green
+        answerIsCorrect();
+    }
+    else if( answer == 'good'){
+        // answer is correct
+        score+= 0.75;
+        // change progress color to green
+        answerIsCorrect();
+    }
+    else if( answer == 'medium'){
+        // answer is correct
+        score+= 0.5;
+        // change progress color to green
+        answerIsCorrect();
+    }
+    else if( answer == 'bad'){
+        // answer is correct
+        score+= 0.3;
+        // change progress color to green
+        answerIsCorrect();
+    }
+    else{
+        score += 0.15
+        // answer is wrong
+        // change progress color to red
+        answerIsWrong();
+    }
+    count = 0;
+    if(runningQuestion < lastQuestion){
+        runningQuestion++;
+        renderQuestion();
+    }
+    else if (runningQuestion == lastQuestion){
+        alert("this is the last question");
+        scoreRender();
+    }
+    else{
+        // end the quiz and show the score
+        clearInterval(TIMER);
+    }
+}
+// answer is correct
+function answerIsCorrect(){
+    document.getElementById(runningQuestion).style.backgroundColor = "black";
+}
+
+// answer is Wrong
+function answerIsWrong(){
+    document.getElementById(runningQuestion).style.backgroundColor = "black";
+}
+
+// score render
+function scoreRender(){
+    scoreDiv.style.display = "block";
+    
+    // calculate the amount of question percent answered by the user
+    const scorePerCent = Math.round(100 * score/questions.length);
+    
+    // choose the image based on the scorePerCent
+    let img = (scorePerCent >= 80) ? "img/5.png" :
+              (scorePerCent >= 60) ? "img/4.png" :
+              (scorePerCent >= 40) ? "img/3.png" :
+              (scorePerCent >= 20) ? "img/2.png" :
+              "img/1.png";
+    
+    scoreDiv.innerHTML = "<img src="+ img +">";
+
+    if(scorePerCent < 50){
+            scoreDiv.innerHTML += "<p>You are tested positive by nicov Your record is sent to ncdc successfully"+ scorePerCent +"%</p>";
+    }else {
+            scoreDiv.innerHTML += "<p>You are tested negative by nicov Your record is sent to ncdc successfully"+ scorePerCent +"%</p>";
+    }
+            modal.style.display = "block";
+}
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    </script>
+    
+</body>
+</html>
