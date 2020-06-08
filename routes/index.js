@@ -236,6 +236,10 @@ router.get("/animations", function(req, res){
 router.get("/ctest", function(req, res){
     res.render("ctest");
 })
+
+router.get("/ctest/spread", function(req, res){
+    res.render("spread");
+})
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){
