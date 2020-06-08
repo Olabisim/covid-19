@@ -327,8 +327,8 @@
 
     <div id="container">
         <div id="start">
-            <div>The following questions will ask you about the spread of covid-19
-                 in your area. 
+            <div>The following questions will ask you about the impact of COVID-19 pandemic on your day-to-day life and
+                     personal finances. 
             </div>
             <button>continue</button>
         </div>
@@ -403,44 +403,44 @@
 // create our questions
 let questions = [
     {
-        question : "How concerned are you about the spread of COVID-19 in your community?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "Has your income been at all affected by the COVID-19 pandemic?",
+        choiceA : "No, not at all",
+        choiceB : "Yes, I have a reduction in my income",
+        choiceC : "No increase or decrease income",
+        choiceD : "Yes, I lost my job",
+        choiceE : "No, I'm a studnet",
         correct : "best"
     },{
-        question : "Have you personally contracted COVI-D-19?",
-        choiceA : "No(have shown no symptoms)",
-        choiceB : "No(tested Negative)",
-        choiceC : "I may have contracted COVID-19, but have not been tested",
-        choiceD : "I am awaiting test results for COVID-19",
-        choiceE : "Yes, i was tested and confirmed positive",
+        question : "How concerned are you that your economic situation will be negatively Impacted in the next 30 days as a result of a change in economic activity?",
+        choiceA : "Very concerned",
+        choiceB : "Concerned",
+        choiceC : "Neither concerned nor unconcerned",
+        choiceD : "Unconcerned",
+        choiceE : "Very unconcerned",
         correct : "good"
     },{
-        question : "How concerned are you that you personally will contract COVID-19?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "When you leave your home, do you typically wear a face mask and go around with hand sanitizers?",
+        choiceA : "Yes, always",
+        choiceB : "Yes, sometimes",
+        choiceC : "I'm not sure",
+        choiceD : "No, I don't like face masks and sanitizers",
+        choiceE : "No, never",
         correct : "medium"
     },{
-        question : "How concerned are you about your access to adequate health care services on COVID-19?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "Do school-aged children living in your household schools being closed due to COVID-19?",
+        choiceA : "Yes, their school has closed",
+        choiceB : "They are homeschooled",
+        choiceC : "They dont attend school",
+        choiceD : "Their school had closed but is re-open or re-opening soon",
+        choiceE : "No, their school has not closed ",
         correct : "bad"
     },{
-        question : "Do you know if testing for Coronavirus is available in your area?",
-        choiceA : "Yes, confirmed",
-        choiceB : "Yes, not confirmed",
-        choiceC : "Not sure",
-        choiceD : "No, not confirmed",
-        choiceE : "No, confirmed",
+        question : "How much of an impact do you believe the COVID-19 pandemic and subsequent quarantine measures have had on your mental and emotional health?",
+        choiceA : "Extreme positive impact",
+        choiceB : "Some postive impact",
+        choiceC : "Neither postive nor negative impact",
+        choiceD : "Some negative impact",
+        choiceE : "Extreme negative impact",
         correct : "worst"
     }
 ];
@@ -591,17 +591,17 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Very low chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Low chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
             
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>High chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>High chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very high chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Very high chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
             }
         }
 </script>

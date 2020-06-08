@@ -327,8 +327,8 @@
 
     <div id="container">
         <div id="start">
-            <div>The following questions will ask you about the spread of covid-19
-                 in your area. 
+            <div>The following questions will ask you about the government response to 
+                    COVID-19 pandemic in your area. 
             </div>
             <button>continue</button>
         </div>
@@ -403,44 +403,44 @@
 // create our questions
 let questions = [
     {
-        question : "How concerned are you about the spread of COVID-19 in your community?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "Which of the following statements best describes your attitude towards your local(town or municipality) government's response to COVID-19? My local government has...",
+        choiceA : "Taken severe measures to contain the spread and it was the right thing to do",
+        choiceB : "Taken some measures to contain the spread, but should do more",
+        choiceC : "Taken some measures to contain the spread, and it is enough",
+        choiceD : "NOT taken any measures and, should do more",
+        choiceE : "NOT taken any measures and, was correct to do so",
         correct : "best"
     },{
-        question : "Have you personally contracted COVI-D-19?",
-        choiceA : "No(have shown no symptoms)",
-        choiceB : "No(tested Negative)",
-        choiceC : "I may have contracted COVID-19, but have not been tested",
-        choiceD : "I am awaiting test results for COVID-19",
-        choiceE : "Yes, i was tested and confirmed positive",
+        question : "Do you trust your state or federal government to make more effective decisions regarding COVID-19?",
+        choiceA : "I extremely trust them",
+        choiceB : "I trust them",
+        choiceC : "I trust or distrust them equally",
+        choiceD : "I distrust them",
+        choiceE : "I extremely distrust them",
         correct : "good"
     },{
-        question : "How concerned are you that you personally will contract COVID-19?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "How affected have you or members of your household been by a sudden increase in prices of goods and services as a result of the covid-19 pandemic?",
+        choiceA : "No effect",
+        choiceB : "Minor effect",
+        choiceC : "Unsure",
+        choiceD : "Moderate effect",
+        choiceE : "Major effect",
         correct : "medium"
     },{
-        question : "How concerned are you about your access to adequate health care services on COVID-19?",
-        choiceA : "Very concerned",
-        choiceB : "Concerned",
-        choiceC : "Neither concerned nor unconcerned",
-        choiceD : "Unconcerned",
-        choiceE : "Very unconcerned",
+        question : "How concerned are you about the long-term negative impacts the Coronavirus could have on Nigeria?",
+        choiceA : "Not at all concerned",
+        choiceB : "Slightly concerned",
+        choiceC : "Somewhat concerned",
+        choiceD : "Moderately concerned",
+        choiceE : "Extremely concerned",
         correct : "bad"
     },{
-        question : "Do you know if testing for Coronavirus is available in your area?",
-        choiceA : "Yes, confirmed",
-        choiceB : "Yes, not confirmed",
-        choiceC : "Not sure",
-        choiceD : "No, not confirmed",
-        choiceE : "No, confirmed",
+        question : "How long do you believe it will take for nigeria to recover to its original form after covid-19?",
+        choiceA : "Less than a month",
+        choiceB : "within six months",
+        choiceC : "Within one year",
+        choiceD : "within 2 years",
+        choiceE : "more than 2 years",
         correct : "worst"
     }
 ];
@@ -591,17 +591,17 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
             
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>High chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very high chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
             }
         }
 </script>

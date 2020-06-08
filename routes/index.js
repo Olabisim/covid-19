@@ -240,6 +240,19 @@ router.get("/ctest", function(req, res){
 router.get("/ctest/spread", function(req, res){
     res.render("spread");
 })
+
+router.get("/ctest/environment", function(req, res){
+    res.render("environment");
+})
+
+router.get("/ctest/government", function(req, res){
+    res.render("government");
+})
+
+router.get("/ctest/information", function(req, res){
+    res.render("information");
+})
+
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){
