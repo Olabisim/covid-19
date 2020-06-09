@@ -253,6 +253,10 @@ router.get("/ctest/information", function(req, res){
     res.render("information");
 })
 
+router.get("/ctest/test", function(req, res){
+    res.render("test");
+})
+
 // //middleware
 // function isLoggedIn(req, res, next){
 //     if(req.isAuthenticated()){
