@@ -179,7 +179,7 @@ p#home-slide4 {
 }
 .second_div .general{
     border-radius: 50%;
-    border: 2px solid #2d8636;
+    border: 2px solid #194d1f;
     text-align: center;
     width: 170px;
     height: 170px;
@@ -437,13 +437,13 @@ section:nth-of-type(6){
     font-weight: 500;
 }
 .fourth_div h2 {
-    color:#3aaf45;
+    color:#194d1f;
     font-weight: 500;
     font-size: 18px;
     padding-bottom: 50px;
 }
 .fourth_div p {
-    color: #3aaf45;
+    color: #194d1f;
     margin-bottom: 0rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 30px 20px 0px 20px;
