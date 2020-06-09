@@ -7,7 +7,7 @@
         <meta name="theme-color" content="#3aaf45" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
-        <title>COVID-19 government test</title>
+        <title>COVID-19 main test</title>
         <style>
         body{
                 margin: 0;
@@ -327,8 +327,7 @@
 
     <div id="container">
         <div id="start">
-            <div>The following questions will ask you about the government response to 
-                    COVID-19 pandemic in your area. 
+            <div>The following questions will ask you about how you receive information about COIVD-19. 
             </div>
             <button>continue</button>
         </div>
@@ -403,45 +402,53 @@
 // create our questions
 let questions = [
     {
-        question : "Which of the following statements best describes your attitude towards your local(town or municipality) government's response to COVID-19? My local government has...",
-        choiceA : "Taken severe measures to contain the spread and it was the right thing to do",
-        choiceB : "Taken some measures to contain the spread, but should do more",
-        choiceC : "Taken some measures to contain the spread, and it is enough",
-        choiceD : "NOT taken any measures and, should do more",
-        choiceE : "NOT taken any measures and, was correct to do so",
+        question : "How do you feel?",
+        choiceA : "Muscle pain and fatigue.",
+        choiceB : "Restlessness",
+        choiceC : "I don't know",
+        choiceD : "Sore throat",
+        choiceE : "Tiredness",
         correct : "best"
     },{
-        question : "Do you trust your state or federal government to make more effective decisions regarding COVID-19?",
-        choiceA : "I extremely trust them",
-        choiceB : "I trust them",
-        choiceC : "I trust or distrust them equally",
-        choiceD : "I distrust them",
-        choiceE : "I extremely distrust them",
+        question : "How often do you cough?",
+        choiceA : "rarely",
+        choiceB : "randomly",
+        choiceC : "regularly",
+        choiceD : "frequently",
+        choiceE : "continuously",
         correct : "good"
     },{
-        question : "How affected have you or members of your household been by a sudden increase in prices of goods and services as a result of the covid-19 pandemic?",
-        choiceA : "No effect",
-        choiceB : "Minor effect",
-        choiceC : "Unsure",
-        choiceD : "Moderate effect",
-        choiceE : "Major effect",
+        question : "Do you experience difficulty breathing or shortness of breath?",
+        choiceA : "Never",
+        choiceB : "rarely",
+        choiceC : "I don't know",
+        choiceD : "a little",
+        choiceE : "Always",
         correct : "medium"
     },{
-        question : "How concerned are you about the long-term negative impacts the Coronavirus could have on Nigeria?",
-        choiceA : "Not at all concerned",
-        choiceB : "Slightly concerned",
-        choiceC : "Somewhat concerned",
-        choiceD : "Moderately concerned",
-        choiceE : "Extremely concerned",
+        question : "Do you certify new loss of taste or smell?",
+        choiceA : "No, confirmed",
+        choiceB : "I don't know",
+        choiceC : "Maybe",
+        choiceD : "sometimes",
+        choiceE : "Yes, confirmed",
         correct : "bad"
     },{
-        question : "How long do you believe it will take nigeria to recover from the crisis of covid-19?",
-        choiceA : "Less than a month",
-        choiceB : "within six months",
-        choiceC : "Within one year",
-        choiceD : "within 2 years",
-        choiceE : "more than 2 years",
-        correct : "worst"
+        question : "Have you come into close contact (within 6 feet) with someone who has a laboratory confirmed COVID – 19 diagnosis in the past 14 days? ?",
+        choiceA : "No, confirmed",
+        choiceB : "No, not confirmed",
+        choiceC : "I don't know",
+        choiceD : "Yes, not confirmed",
+        choiceE : "Yes, confirmed",
+        correct : "bad"
+    },{
+        question : "Do you experience chest pain or pressure?",
+        choiceA : "Never",
+        choiceB : "rarely",
+        choiceC : "I don't know",
+        choiceD : "a little",
+        choiceE : "Always",
+        correct : "medium"
     }
 ];
 
@@ -591,17 +598,17 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Very low circumstance you have COVID-19. Your record is sent to ncdc successfully</p>";
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Low circumstance you have COVID-19. Your record is sent to ncdc successfully</p>";
             
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>High circumstance you have COVID-19. Your record is sent to ncdc successfully</p> <p>contact ncdc asap</p>";
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Very high circumstance you have COVID-19. Your record is sent to ncdc successfully</p> <p>contact ncdc asap</p>";
             }
         }
 </script>
