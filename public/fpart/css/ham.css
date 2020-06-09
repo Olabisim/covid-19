@@ -24,7 +24,7 @@ section:nth-of-type(1){
     color: white;
     font-weight: 900;
     letter-spacing: 1px;
-    background-color: #3aaf45;
+    background-color: #2d8636;
     border-radius: 5%;
     padding-left: 10px;
     text-align: left;
@@ -49,7 +49,7 @@ section:nth-of-type(1){
 .bar{
     height: 2px;
     width: 100%;
-    background-color: #3aaf45;
+    background-color: black;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -205,13 +205,13 @@ p#home-slide4 {
     margin: 0;
 }
 .second_div > div > div > h2 {
-    color: navy;
+    color: #2d8636;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
     font-weight: 900;
 }
 .second_div > div > div > div > h2 {
-    color: navy;
+    color: #2d8636;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
     font-weight: 900;
@@ -314,7 +314,7 @@ border-radius: 5%;
     padding-top: 100px;
 }
 .pre_carousel_note h2{
-    color: #3aaf45;
+    color: #2d8636;
     font-size: 23px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
