@@ -24,7 +24,7 @@ section:nth-of-type(1){
     color: white;
     font-weight: 900;
     letter-spacing: 1px;
-    background-color: navy;
+    background-color: #3aaf45;
     border-radius: 5%;
     padding-left: 10px;
     text-align: left;
@@ -49,7 +49,7 @@ section:nth-of-type(1){
 .bar{
     height: 2px;
     width: 100%;
-    background-color: navy;
+    background-color: #3aaf45;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -179,7 +179,7 @@ p#home-slide4 {
 }
 .second_div .general{
     border-radius: 50%;
-    border: 2px solid navy;
+    border: 2px solid black;
     text-align: center;
     width: 170px;
     height: 170px;
@@ -270,7 +270,7 @@ p#home-slide4 {
 }
 
 .statistics_div h2{
-    color: navy;
+    color: #3aaf45;
     font-style: italic;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -295,8 +295,8 @@ border-radius: 5%;
     border-radius: 5%;
 }
 .forathirdill {
-    border: 1px solid navy; 
-    color: navy; 
+    border: 1px solid #3aaf45; 
+    color: #3aaf45; 
     border-radius: 10%;
 
 }
@@ -314,7 +314,7 @@ border-radius: 5%;
     padding-top: 100px;
 }
 .pre_carousel_note h2{
-    color: navy;
+    color: #3aaf45;
     font-size: 23px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -385,7 +385,7 @@ section:nth-of-type(6){
 } */
 
 .support_athird_pill {
-    background: navy;
+    background: #3aaf45;
     width: 50%;
     height: 500px;
     border-radius: 50%;
@@ -398,7 +398,7 @@ section:nth-of-type(6){
     margin-bottom: 50px;
 }
 .athird_pill span{
-    color: navy;
+    color: #3aaf45;
 }
 .athird_pill h2:nth-of-type(1){
     padding-top: 80px;
@@ -437,13 +437,13 @@ section:nth-of-type(6){
     font-weight: 500;
 }
 .fourth_div h2 {
-    color:navy;
+    color:#3aaf45;
     font-weight: 500;
     font-size: 18px;
     padding-bottom: 50px;
 }
 .fourth_div p {
-    color: navy;
+    color: #3aaf45;
     margin-bottom: 0rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 30px 20px 0px 20px;
@@ -481,21 +481,21 @@ footer {
 }
 footer div{
     padding-bottom: 10px;
-    color: navy;
+    color: #3aaf45;
 }
 footer div:nth-of-type(2) i{
     width: 30px;
     height: 30px;
-    color: navy;
+    color: #3aaf45;
     margin: 0px 10px 10px 0px;
     padding: 5px;
-    border: 1px solid navy;
+    border: 1px solid #3aaf45;
     border-radius: 50%;
     background: white;
     transition: 0.5s;
 }
 footer div:nth-of-type(2) i:hover{
-    background: navy;
+    background: #3aaf45;
     margin: 0 2% 0 1.5%;
     color: white;
     transform: rotateZ(720deg);
