@@ -1,18 +1,11 @@
 
-footer div:nth-of-type(2) i{
-        color: navy;
-    }
-
-.first_div {
-        border-right: 1px solid navy;
-    }
 img{
         width: 100%;
 }
 .capi {
         text-transform: uppercase;
         font-weight: 700;
-        color: navy;
+        color: green;
 }
 .settt {
         margin-top: -6px;
@@ -35,14 +28,14 @@ img{
         color: white;
         font-weight: 900;
         font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 1px;;-webkit-text-stroke: 2px navy;
+        letter-spacing: 1px;;-webkit-text-stroke: 2px green;
 }
 .uiprobs {
         margin-top: 6em;
         width: 50%;
 }
 .ui.inverted.menu {
-        background-color: navy;
+        background-color: green;
 }
 .bt-color {
         background-color: none;

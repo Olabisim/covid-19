@@ -12,7 +12,7 @@ img {
 }
 
 .caption-full p em {
-    color: navy;
+    color: green;
 }
 #form {
     display: inline;
@@ -27,7 +27,7 @@ img {
     color: purple;
 }
 h2.upp {
-    color: navy; 
+    color: green; 
     font-weight: 800;
     font-size: 18px;
     text-align: center;
@@ -43,16 +43,16 @@ h2.upp {
     margin-top: 110px;
 }
 .ui.fixed.inverted.menu {
-        background-color: navy;
+        background-color: green;
 }
 .input-style {
-    border: 1px solid navy;
+    border: 1px solid green;
 }
 .comment-style {
     font-family: algerian;
     letter-spacing: 2px;
     text-transform: capitalize;
-    color: navy;
+    color: green;
     font-size: 12px;
 }
 .bar {
@@ -60,7 +60,7 @@ h2.upp {
 }
 img.circle {
     border-radius: 0%;
-    border: 5px solid navy;
+    border: 5px solid green;
     transition: 1s;
     height: 400px;
     width: 400px;
@@ -80,7 +80,7 @@ img.circle {
 
 
 .thumbnail hr {
-    background-color: navy;
+    background-color: green;
     height: 1px;
     margin: auto;
     width: 100px;

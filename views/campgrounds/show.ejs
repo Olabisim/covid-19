@@ -172,13 +172,13 @@
                                     <form action="/posts/<%= campground._id %>/comments" method="POST">
                                         <div class="form-group">
                                             <% if(!currentUser){ %>
-                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: navy; border: 2px solid #0000b3;" placeholder="type your comments here">
+                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: green; border: 2px solid green;" placeholder="type your comments here">
                                             <% } else { %>
-                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: navy; border: 2px solid #0000b3;" placeholder="type your comment as <%= currentUser.username %>">
+                                                <input class="form-control input-style comment-style" type="text" name="comment[text]" style="color: green; border: 2px solid green;" placeholder="type your comment as <%= currentUser.username %>">
                                             <% } %>
                                         </div>
                                         <div class="form-group">
-                                            <button class="ui basic button pink" type="submit" style="border: 2px solid #ff6680;"><i class="location arrow icon"></i></button>
+                                            <button class="ui basic button green" type="submit" style="border: 2px solid green;"><i class="location arrow icon"></i></button>
                                         </div>
                                     </form>
                                 </div>

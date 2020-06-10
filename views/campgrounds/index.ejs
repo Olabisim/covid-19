@@ -127,12 +127,14 @@
                                         <% var campground = campgrounds[i]; %>        
                                         <div class="item">
                                                 <div class="image">
-                                                        <img src="<%=campground.image%>" style="
-                                                        border: 3px solid #700f70;">
+                                                        <a href="/posts/<%= campground._id%>">
+                                                                <img src="<%=campground.image%>" style="
+                                                                border: 3px solid green;">
+                                                        </a>
                                                 </div>
                                         
                                                 <div class="content" style="padding-left: 70px; margin-top: -6px;">
-                                                        <a class="ui violet button capi" href="/posts/<%= campground._id%>" style="background-color: #700f70;"><%= campground.name %></a>
+                                                        <a class="ui black button capi" href="/posts/<%= campground._id%>" style="background-color: #700f70;"><%= campground.name %></a>
                                                         <div class="space">
                                                                 <div class="meta">
                                                                         <span><%= campground.created.toDateString() %></span>
