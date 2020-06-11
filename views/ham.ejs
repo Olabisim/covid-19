@@ -11,6 +11,7 @@
                 <link rel="stylesheet" href="fpart/css/virusanimation.css">	
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
                 <link rel="stylesheet" href="fpart/css/ham.css" type="text/css">	
+                <link rel="stylesheet" href="fpart/css/svg.css" type="text/css">	
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <script>
                     jQuery(document).ready(function($) {
@@ -21,157 +22,6 @@
                     });
                 </script>
                 <style>
-                        svg {
-                                width: 40%;
-                        }
-                        @media screen and (max-width: 1200px){
-                                svg {
-                                        width: 50%;
-                                }
-                        }
-                #bubbles {
-                        
-                        animation: bubbles 7s ease-in-out infinite;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                }
-                @keyframes bubbles {
-                        0% {
-                                transform: translate(0);
-                        }
-                        30% {
-                                transform: translate(50px, 50px);
-                        }
-                        40% {
-                                transform: translate(0);
-                        }
-                        70% {
-                                transform: translate(50px, 50px);
-                        }
-                        80% {
-                                transform: translate(50px, -50px)
-                        }
-                        100% {
-                                transform: translate(0);
-                        }
-                }
-		#plants{
-                        
-                        
-                animation: breeze 10s linear infinite alternate-reverse;
-                transform-origin: bottom;
-                transform-box: fill-box;
-                }
-                @keyframes breeze {
-                0% {
-                        transform: skewX(0deg);
-                }
-                25%{
-                        transform: skewX(20deg);
-
-                }
-                50% {
-                        transform: skewX(0deg);
-                }
-                75%{
-                        transform: skewX(-20deg);
-
-                }
-                100% {
-                        transform: skewX(0deg);
-                }
-                
-                }
-
-                #first_paper
-                 {
-                        animation: movpaper 3s ease-in-out infinite;
-                } 
-                @keyframes movpaper {
-                        from{
-                                transform: translateX(0px);
-                        }
-                        to {
-                                transform: translateX(150px);
-                        }
-                }
-                #handtopasspaper {
-                        
-                        animation: hat 1.5s ease-in-out infinite alternate;
-                        transform-origin: top;
-                        transform-box: fill-box;
-                }
-                @keyframes hat {
-                from{
-                        transform: translateY(0%) rotateZ(0);
-                }
-                to{
-                        transform: translateY(5%) rotateZ(-50deg);
-   
-                }
-                
-                }
-                #lastmanface,
-		#lastmanbody{
-                        
-                        animation: breezze 1.5s linear infinite alternate-reverse;
-                        transform-origin: bottom;
-                        transform-box: fill-box;
-                }
-                @keyframes breezze {
-                from {
-                        transform: skewX(0deg);
-                }
-                to{
-                        transform: skewY(10deg);
-                }
-                
-                }
-                #bigvirus
-                 {
-                        animation: viruss 8s ease-in-out infinite;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                }
-                @keyframes viruss {
-                        0% {
-                                transform: rotateZ(0deg);
-                        }
-                        30% {
-                                transform: rotateZ(360deg);
-                        }
-                        40% {
-                                transform: translate(10px, 15px)
-                        }
-                        70% {
-                                transform: translate(-10px, -10px)
-                        }
-                        80% {
-                                transform: translate(10px, -10px)
-                        }
-                        100% {
-                                transform: rotateZ(0);
-                        }
-                }
-                #firstvirus
-                 {
-                        animation: viruss 7s ease-in-out infinite;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                }
-                
-                #secondvirus
-                 {
-                        animation: viruss 6s ease-in-out infinite;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                }
-                #thirdvirus
-                 {
-                        animation: viruss 5s ease-in-out infinite;
-                        transform-origin: center;
-                        transform-box: fill-box;
-                }
                 </style>
                 <title>COVID-19 FOR NIGERIANS</title>	
         </head>	
@@ -562,8 +412,8 @@
                         <path id="Vector_101" d="M317.92 225.59L285.75 251.78L244.36 244.38L272.23 222.5L317.92 225.59Z" fill="#E3E8F4"/>
                         </g>
                         <path id="Vector_102" d="M741.09 583.44C741.849 583.071 742.686 582.893 743.529 582.921C744.372 582.949 745.196 583.183 745.928 583.602C746.66 584.021 747.279 584.612 747.731 585.324C748.183 586.037 748.454 586.849 748.52 587.69L750.31 610.9L739.69 612.82L734.09 596.04L741.09 583.44Z" fill="#26B80E"/>
-                        <path id="Vector_103" d="M369.54 427.87L207.01 510.35C205.146 511.301 203.582 512.75 202.493 514.537C201.404 516.323 200.831 518.377 200.84 520.47C200.848 522.562 201.437 524.611 202.54 526.389C203.643 528.167 205.219 529.604 207.09 530.54L557.14 706.21C563.368 709.329 570.267 710.869 577.23 710.694C584.193 710.52 591.006 708.637 597.07 705.21L744.51 622.07C746.299 621.049 747.775 619.56 748.779 617.762C749.783 615.964 750.278 613.926 750.209 611.868C750.14 609.81 749.51 607.809 748.388 606.083C747.265 604.356 745.693 602.969 743.84 602.07L379.53 427.76C377.968 427.012 376.254 426.633 374.522 426.652C372.79 426.671 371.086 427.088 369.54 427.87Z" fill="#0BB908"/>
-                        <path id="Vector_104" d="M205.92 496L200.83 499.78L200.43 517.88C200.398 519.291 200.763 520.683 201.485 521.896C202.206 523.109 203.255 524.095 204.51 524.74L560.54 707.44C561.348 707.857 562.249 708.059 563.158 708.027C564.066 707.994 564.951 707.729 565.728 707.256C566.504 706.783 567.146 706.118 567.591 705.326C568.036 704.533 568.27 703.639 568.27 702.73V676.44L205.92 496Z" fill="#27B535"/>
+                        <path id="Vector_103" d="M369.54 427.87L207.01 510.35C205.146 511.301 203.582 512.75 202.493 514.537C201.404 516.323 200.831 518.377 200.84 520.47C200.848 522.562 201.437 524.611 202.54 526.389C203.643 528.167 205.219 529.604 207.09 530.54L557.14 706.21C563.368 709.329 570.267 710.869 577.23 710.694C584.193 710.52 591.006 708.637 597.07 705.21L744.51 622.07C746.299 621.049 747.775 619.56 748.779 617.762C749.783 615.964 750.278 613.926 750.209 611.868C750.14 609.81 749.51 607.809 748.388 606.083C747.265 604.356 745.693 602.969 743.84 602.07L379.53 427.76C377.968 427.012 376.254 426.633 374.522 426.652C372.79 426.671 371.086 427.088 369.54 427.87Z" fill="green"/>
+                        <path id="Vector_104" d="M205.92 496L200.83 499.78L200.43 517.88C200.398 519.291 200.763 520.683 201.485 521.896C202.206 523.109 203.255 524.095 204.51 524.74L560.54 707.44C561.348 707.857 562.249 708.059 563.158 708.027C564.066 707.994 564.951 707.729 565.728 707.256C566.504 706.783 567.146 706.118 567.591 705.326C568.036 704.533 568.27 703.639 568.27 702.73V676.44L205.92 496Z" fill="green"/>
                         <path id="Vector_105" d="M369.54 406.89L207.01 489.36C205.145 490.308 203.579 491.755 202.487 493.54C201.395 495.325 200.819 497.378 200.825 499.47C200.83 501.563 201.415 503.613 202.516 505.392C203.617 507.172 205.19 508.611 207.06 509.55L557.14 685.22C563.369 688.336 570.267 689.875 577.23 689.701C584.192 689.526 591.005 687.644 597.07 684.22L744.51 601.07C746.299 600.049 747.775 598.56 748.779 596.762C749.783 594.964 750.278 592.926 750.209 590.868C750.14 588.81 749.51 586.809 748.388 585.083C747.266 583.356 745.693 581.969 743.84 581.07L379.53 406.77C377.967 406.024 376.253 405.646 374.521 405.667C372.789 405.688 371.085 406.106 369.54 406.89Z" fill="white"/>
                         <path id="Vector_106" d="M403.18 421.86L224.1 512.79L531.89 666.69L716.57 572.95L403.18 421.86Z" fill="white"/>
                         <path id="Vector_107" d="M644.52 638.71C654.953 638.71 663.41 633.7 663.41 627.52C663.41 621.34 654.953 616.33 644.52 616.33C634.087 616.33 625.63 621.34 625.63 627.52C625.63 633.7 634.087 638.71 644.52 638.71Z" fill="#15A012"/>

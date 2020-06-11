@@ -1,0 +1,152 @@
+
+            svg {
+                width: 40%;
+        }
+        @media screen and (max-width: 1200px){
+                svg {
+                        width: 50%;
+                }
+        }
+#bubbles {
+        
+        animation: bubbles 7s ease-in-out infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+}
+@keyframes bubbles {
+        0% {
+                transform: translate(0);
+        }
+        30% {
+                transform: translate(50px, 50px);
+        }
+        40% {
+                transform: translate(0);
+        }
+        70% {
+                transform: translate(50px, 50px);
+        }
+        80% {
+                transform: translate(50px, -50px)
+        }
+        100% {
+                transform: translate(0);
+        }
+}
+#plants{
+        
+        
+animation: breeze 10s linear infinite alternate-reverse;
+transform-origin: bottom;
+transform-box: fill-box;
+}
+@keyframes breeze {
+0% {
+        transform: skewX(0deg);
+}
+25%{
+        transform: skewX(20deg);
+
+}
+50% {
+        transform: skewX(0deg);
+}
+75%{
+        transform: skewX(-20deg);
+
+}
+100% {
+        transform: skewX(0deg);
+}
+
+}
+
+#first_paper
+    {
+        animation: movpaper 3s ease-in-out infinite;
+} 
+@keyframes movpaper {
+        from{
+                transform: translateX(0px);
+        }
+        to {
+                transform: translateX(150px);
+        }
+}
+#handtopasspaper {
+        
+        animation: hat 1.5s ease-in-out infinite alternate;
+        transform-origin: top;
+        transform-box: fill-box;
+}
+@keyframes hat {
+from{
+        transform: translateY(0%) rotateZ(0);
+}
+to{
+        transform: translateY(5%) rotateZ(-50deg);
+
+}
+
+}
+#lastmanface,
+#lastmanbody{
+        
+        animation: breezze 1.5s linear infinite alternate-reverse;
+        transform-origin: bottom;
+        transform-box: fill-box;
+}
+@keyframes breezze {
+from {
+        transform: skewX(0deg);
+}
+to{
+        transform: skewY(10deg);
+}
+
+}
+#bigvirus
+    {
+        animation: viruss 8s ease-in-out infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+}
+@keyframes viruss {
+        0% {
+                transform: rotateZ(0deg);
+        }
+        30% {
+                transform: rotateZ(360deg);
+        }
+        40% {
+                transform: translate(10px, 15px)
+        }
+        70% {
+                transform: translate(-10px, -10px)
+        }
+        80% {
+                transform: translate(10px, -10px)
+        }
+        100% {
+                transform: rotateZ(0);
+        }
+}
+#firstvirus
+    {
+        animation: viruss 7s ease-in-out infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+}
+
+#secondvirus
+    {
+        animation: viruss 6s ease-in-out infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+}
+#thirdvirus
+    {
+        animation: viruss 5s ease-in-out infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+}
