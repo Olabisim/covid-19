@@ -280,7 +280,6 @@ p#home-slide4 {
 .finebutton {
     background: none;
     padding: 8px 20px;
-    display: block;
     margin: auto;
 }    
 
@@ -292,6 +291,7 @@ border-radius: 5%;
 .forathirdpill {
     border: 1px solid white; 
     color: white; 
+    width: 100px;
     border-radius: 5%;
 }
 .forathirdill {
@@ -339,13 +339,6 @@ border-radius: 5%;
 
 
 .athird_div {
-    background-image: linear-gradient(rgb(255, 215, 0,0),rgb(255, 215, 0,0)),url(../full/check.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 500px;
-    padding: 20px;
 }
 
 .athird_div h2{
@@ -355,18 +348,11 @@ border-radius: 5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 .athird_ill {
-    background-image: url(../full/doctor.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid white;
-    width: 100%;
     /* border-top-left-radius: 50px 50px;
     border-bottom-left-radius: 50px 50px;
     border-top-right-radius: 50px 50px;
     border-bottom-right-radius: 50px 50px; */
-    height: 500px;
-    transition: 1s;
+    height: 600px;
     text-align: center;
 }
 .athird_ill:hover {
@@ -732,3 +718,8 @@ opacity: 0;
 
 
 
+a.ui.basic.button {
+    color: white;
+}.ui.basic.button {
+    color: white;
+}
