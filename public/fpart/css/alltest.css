@@ -7,6 +7,9 @@
             font-family: arial;
             text-align: right;  
             overflow-x: hidden;      
+            background-image: linear-gradient(to left, rgb(255, 255, 255,0.75),rgb(255, 255, 255,0.75)),url(../full/thoughts.png);
+            background-position: 80% 100%;
+            background-size: cover;
         }
     .topnav {
         background-color: #3aaf45;
@@ -30,6 +33,7 @@
         font-size: 25px;
         width: 41%;
         color: black;
+
     }
     #start button{
         text-align: right;
@@ -206,9 +210,21 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    .closee {
+        background: none;
+        border:none;
+        padding: 0; 
+        color: red; 
+        font-weight: 800;
+    }
 
-
-
+    .dnr {
+        opacity: 0;
+        display:block
+    }
+    label {
+        text-align:left;
+    }
 
 
 

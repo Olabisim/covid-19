@@ -24,7 +24,13 @@
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content" id="modal-content">
-        <a href="/">close</a>
+
+            <form action="/contactfa" method="POST">
+
+                <input name="bodyy" type="text" id="mytext" class="dnr">
+                <input type="submit" value="close" class="closee">
+
+            </form>
         </div>
     </div>
 
@@ -33,7 +39,7 @@
 
     <div id="container">
         <div id="start">
-            <div>The following questions will ask you about the impact of COVID-19 pandemic on your day-to-day life and
+            <div>The following questions will ask you about the impact of COVID-19 pandemic on your day-to-day activities and
                      personal finances. 
             </div>
             <button>continue</button>
@@ -297,17 +303,25 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Very low chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Environment impact</p></h4><hr/><p>Very low chance of contracting COVID-19 through day-to-day activities and personal finances.</p>✔ <p>Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Environment impact.</span> <p style='color: black;'>Very low chance of contracting COVID-19 through day-to-day activities and personal finances.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Low chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
-            
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Environment impact</p></h4><hr/><p>Low chance of contracting COVID-19 through day-to-day activities and personal finances.<p>✔ </p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'><span style='color: purple;'> Environment impact.</span> </span> <p style='color: black;'>Low chance of contracting COVID-19 through day-to-day activities and personal finances.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                    
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>High chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Environment impact</p></h4><hr/><p>High chance of contracting COVID-19 through day-to-day activities and personal finances.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Environment impact.</span>  <p style='color: black;'>High chance of contracting COVID-19 through day-to-day activities and personal finances.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Environment impact</h2><hr/><p>Very high chance of contracting COVID-19 through environment. Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Environment impact</p></h4><hr/><p>Very high chance of contracting COVID-19 through day-to-day activities and personal finances.</p>✔ <p> Your record will be ssent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Environment impact.</span><p style='color: black;'>Very high chance of contracting COVID-19 through day-to-day activities and personal finances.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
         }
 </script>

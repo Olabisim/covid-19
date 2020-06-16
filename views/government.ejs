@@ -16,17 +16,23 @@
 <body>
     
 
-    <div class="topnav">
-        <h2>COVID-19 Impact in Nigeria</h2>
-    </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content" id="modal-content">
-        <a href="/">close</a>
+        <div class="topnav">
+                <h2>COVID-19 Impact in Nigeria</h2>
         </div>
-    </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content" id="modal-content">
+    
+                <form action="/contactfa" method="POST">
+
+                    <input name="bodyy" type="text" id="mytext" class="dnr">
+                    <input type="submit" value="close" class="closee">
+
+                </form>
+            </div>
+        </div>
 
 
 
@@ -229,13 +235,13 @@ function renderProgress(){
                 // answer is correct
                 // change progress color to green
                 answerIsCorrect();
-                score+= 0.15;
+                score+= 0.9;
             }
             else if( answer == 'good'){
                 // answer is correct
                 // change progress color to green
-                score += 0.3;
                 answerIsCorrect();
+                score+= 0.75;
             }
             else if( answer == 'medium'){
                 // answer is correct
@@ -244,17 +250,20 @@ function renderProgress(){
                 answerIsCorrect();
             }
             else if( answer == 'bad'){
-                score+= 0.75;
+                score += 0.3;
                 // answer is correct
                 // change progress color to green
                 answerIsCorrect();
             }
             else{
-                score+= 0.9;
+                score+= 0.15;
                 // answer is wrong
                 // change progress color to red
                 answerIsWrong();
             }
+
+
+            
             count = 0;
             if(runningQuestion < lastQuestion){
                 runningQuestion++;
@@ -297,17 +306,25 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Government positive impact</p></h4><hr/>✔ <p>Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Government positive impact.</span>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
-            
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Government positive impact</p></h4><hr/>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Government positive impact.</span>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                    
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Government positive impact</p></h4><hr/>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Government positive impact.</span>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "% Government impact</h2><hr/><p> Your record is sent to ncdc successfully</p>";
+                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Government positive impact</p></h4><hr/>✔ <p> Your record will be ssent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Government positive impact.</span>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
         }
 </script>

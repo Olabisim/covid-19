@@ -5,12 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#3aaf45" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
         <link rel="stylesheet" href="../fpart/css/alltest.css">		
         <title>COVID-19 symptoms test</title>
         <style>
 
+            #forinfo {
+                    display: none;
+                }
 
         </style>
 </head>
@@ -25,7 +28,15 @@
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content" id="modal-content">
-        <a href="/">close</a>
+
+            <form action="/contacty" method="POST">
+
+                <input name="name" type="text" id="myname" class="dnr">
+                <input name="number" type="text" id="mynum" class="dnr">
+                <input name="bodyy" type="text" id="mytext" class="dnr">
+                <input type="submit" value="close" class="closee">
+
+            </form>
         </div>
     </div>
 
@@ -37,6 +48,35 @@
             <div>The following questions will test you on symptoms of COIVD-19. 
             </div>
             <button>continue</button>
+        </div>
+        
+        <div id="forinfo">
+            <div>
+
+                <div style="margin:40px;">
+
+
+
+                    <div class="ui form" style="transform: translate(0%, 50%);">
+                        <div class="field">
+                            <label>Name</label>
+                            <input id="some1" placeholder="input something" />
+                        </div>
+
+                        <div class="field">
+                            <label>Number</label>
+                            <input id="some2" placeholder="input something" type="number"/>
+                        </div>
+
+                        <div id="forinfonext" style="background: green; width: 0px;">
+                            <button id="snbtn" class="ui black button basic" style="background: none;box-shadow: none;">NEXT</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
         <div id="quiz" style="display: none">
             <div id="question"></div>   
@@ -89,8 +129,6 @@
 
 
 
-
-
 <script>
         const start = document.getElementById("start");
         const quiz = document.getElementById("quiz");
@@ -105,6 +143,8 @@
         const progress = document.getElementById("progress");
         const scoreDiv = document.getElementById("myModal");
         const modalC = document.getElementById("modal-content");
+        const forinfo = document.getElementById("forinfo");
+        const forinfonext = document.getElementById("forinfonext");
 
 // create our questions
 let questions = [
@@ -181,11 +221,19 @@ function renderQuestion(){
         choiceE.innerHTML = q.choiceE;
 }
 
+
 start.addEventListener("click",startQuiz);
+
+forinfonext.addEventListener("click",forinfoo);
 
 // start quiz
 function startQuiz(){
         start.style.display = "none";
+        forinfo.style.display = "block";
+}
+
+function forinfoo(){
+        forinfo.style.display = "none";
         renderQuestion();
         quiz.style.display = "block";
         renderProgress();
@@ -305,19 +353,194 @@ function renderProgress(){
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Very low circumstance you have COVID-19. Your record is sent to ncdc successfully</p>";
+
+
+                
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% <p>Tested positive</p></h2><hr/><p>Very low circumstance you are infected with COVID-19.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Tested positive</span> <p style='color: black;'>Very low circumstance he/she is infected with COVID-19.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                    var testnum = document.getElementById("some2").value;
+                    document.getElementById("mynum").value = testnum;//Now you get the js variable inside your form element
+                    var testname = document.getElementById("some1").value;
+                    document.getElementById("myname").value = testname;//Now you get the js variable inside your form element
+
+
+
+
+
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Low circumstance you have COVID-19. Your record is sent to ncdc successfully</p>";
+
+
+                
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% <p>Tested positive</p></h2><hr/><p>Low circumstance you are infected with COVID-19.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Tested positive</span> <p style='color: black;'>Low circumstance he/she is infected with COVID-19.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                    var testnum = document.getElementById("some2").value;
+                    document.getElementById("mynum").value = testnum;//Now you get the js variable inside your form element
+                    var testname = document.getElementById("some1").value;
+                    document.getElementById("myname").value = testname;//Now you get the js variable inside your form element
+
+
+
+
             
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>High circumstance you have COVID-19. Your record is sent to ncdc successfully</p> <p>contact ncdc asap</p>";
+
+                
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% <p>Tested positive</p></h2><hr/><p>High circumstance you are infected with COVID-19.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
+                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Tested positive</span> <p style='color: black;'>Very low circumstance he/she is infected with COVID-19.</p>";
+                    document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                    var testnum = document.getElementById("some2").value;
+                    document.getElementById("mynum").value = testnum;//Now you get the js variable inside your form element
+                    var testname = document.getElementById("some1").value;
+                    document.getElementById("myname").value = testname;//Now you get the js variable inside your form element
+
+
+
             }
             else { 
-                    modalC.innerHTML += "<h2> "+ scorePerCent + "%</h2><hr/><p>Very high circumstance you have COVID-19. Your record is sent to ncdc successfully</p> <p>contact ncdc asap</p>";
+                
+                modalC.innerHTML += "<h2> "+ scorePerCent + "% <p>Tested positive</p></h2><hr/><p>Very high circumstance you are infected with COVID-19.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
+                var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'>Tested positive</span> <p style='color: black;'>Low circumstance he/she is infected with COVID-19.</p>";
+                document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
+                var testnum = document.getElementById("some2").value;
+                document.getElementById("mynum").value = testnum;//Now you get the js variable inside your form element
+                var testname = document.getElementById("some1").value;
+                document.getElementById("myname").value = testname;//Now you get the js variable inside your form element
             }
         }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+/*
+* Version 0.2.0
+* A tiny jQuery plugin that could control button's state
+*/
+var SNButton = {
+init: function(e, params) {
+    var button = "#"+e;
+    var input = "#"+jQuery(button).data("snnode");
+
+    if(params)
+    {
+        var enabletext = params.enabletext ? params.enabletext : $(button).text();
+        var disabletext = params.disabletext ? params.disabletext : $(button).text();
+        var fields = params.fields ? params.fields : null;
+    }
+    if(fields)
+    {
+        input = Array();
+        $.each(fields, function(index, value, array) {
+                input.push("#"+value);
+                });
+    }
+
+    jQuery(button).attr("disabled", SNButton.allhastext(input));
+    jQuery(button).text(disabletext);
+    if(Array.isArray(input))
+    {
+        $.each(input, function(index, value, array) {
+            jQuery(value).on('input propertychange', function() {
+                if(SNButton.allhastext(input))
+                {
+                    jQuery(button).attr("disabled", true);
+                    jQuery(button).text(disabletext);
+                }
+                else
+                {
+                    jQuery(button).attr("disabled", false);
+                    jQuery(button).text(enabletext);
+                }
+            });
+        });
+    }
+    else
+    {
+        jQuery(input).on('input propertychange', function() {
+            if(SNButton.allhastext(input))
+            {
+                jQuery(button).attr("disabled", true);
+                jQuery(button).text(disabletext);
+            }
+            else
+            {
+                jQuery(button).attr("disabled", false);
+                jQuery(button).text(enabletext);
+            }
+        });
+    }
+},
+allhastext: function(sdf) {
+    console.log(sdf);
+    if(Array.isArray(sdf))
+    {
+        var ret = false;
+        $.each(sdf, function(index, value, array) {
+            if(jQuery(value).val()=="")
+            {
+                ret = true;
+            }
+        });
+        return ret;
+    }
+    else
+    {
+        if(jQuery(sdf).val()=="")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+}
+</script>
+
+<script>
+$().ready(function() {
+
+    SNButton.init("snbtn", {
+        fields: ["some1", "some2"]
+            });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

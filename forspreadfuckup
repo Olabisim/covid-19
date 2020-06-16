@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#3aaf45" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
-        <link rel="stylesheet" href="../fpart/css/alltest.css">		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
-        <title>COVID-19 information test</title>
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+        <link rel="stylesheet" href="../fpart/css/alltest.css">		
+        <title>COVID-19 spread test</title>
+        <style>
+        </style>
 </head>
 <body>
     
@@ -22,12 +24,11 @@
         <!-- Modal content -->
         <div class="modal-content" id="modal-content">
 
-            <form action="/contactfa" method="POST">
-
-                <input name="bodyy" type="text" id="mytext" class="dnr">
-                <input type="submit" value="close" class="closee">
-
+            <form>
+                <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occured')">
+                <input type="text" id="mytext">
             </form>
+        <a href="/">close</a>
         </div>
     </div>
 
@@ -35,11 +36,14 @@
 
 
     <div id="container">
+
         <div id="start">
-            <div>The following questions will ask you about how you receive information about COIVD-19. 
+            <div>The following questions will ask you about the spread of covid-19
+                 in your area.
             </div>
             <button>continue</button>
         </div>
+
         <div id="quiz" style="display: none">
             <div id="question"></div>   
 
@@ -60,6 +64,10 @@
     
 
 
+    <form>
+        <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occured')">
+      </form>
+      
 
 
 
@@ -111,37 +119,45 @@
 // create our questions
 let questions = [
     {
-        question : "How have you been getting updates on COVID-19?",
-        choiceA : "Health Organizations ( e.g. WHO, CDC, local health department)",
-        choiceB : "Television(local or national station)",
-        choiceC : "Radio(Local or National)",
-        choiceD : "Social media(e.g. Facebook, Twitter, Instagram, Whatsapp)",
-        choiceE : "Other",
+        question : "How concerned are you about the spread of COVID-19 in your community?",
+        choiceA : "Very concerned",
+        choiceB : "Concerned",
+        choiceC : "Neither concerned nor unconcerned",
+        choiceD : "Unconcerned",
+        choiceE : "Very unconcerned",
         correct : "best"
     },{
-        question : "How much do you agree with the following statement: \"I am well informed about COVID-19 and understand where to get additional information\" ?",
-        choiceA : "Strongly agree",
-        choiceB : "Agree",
-        choiceC : "Neither agree nor disagree",
-        choiceD : "Disagree",
-        choiceE : "Strongly disagree",
+        question : "Have you personally contracted COVI-D-19?",
+        choiceA : "No(have shown no symptoms)",
+        choiceB : "No(tested Negative)",
+        choiceC : "I may have contracted COVID-19, but have not been tested",
+        choiceD : "I am awaiting test results for COVID-19",
+        choiceE : "Yes, i was tested and confirmed positive",
         correct : "good"
     },{
-        question : "How satisfied are you with the media coverage of COVID-19?",
-        choiceA : "Very satisfied",
-        choiceB : "Satisfied",
-        choiceC : "Neither satisfied nor dissatisfied",
-        choiceD : "Dissatisfied",
-        choiceE : "Very dissatisified",
+        question : "How concerned are you that you personally will contract COVID-19?",
+        choiceA : "Very concerned",
+        choiceB : "Concerned",
+        choiceC : "Neither concerned nor unconcerned",
+        choiceD : "Unconcerned",
+        choiceE : "Very unconcerned",
         correct : "medium"
     },{
-        question : "How satisfied are you with the media coverage of precautions(e.g. on face masks, hand sanitizers, social distancing e.t.c) on COVID-19?",
-        choiceA : "Very satisfied",
-        choiceB : "Satisfied",
-        choiceC : "Neither satisfied nor dissatisfied",
-        choiceD : "Dissatisfied",
-        choiceE : "Very dissatisified",
+        question : "How concerned are you about your access to adequate health care services on COVID-19?",
+        choiceA : "Very concerned",
+        choiceB : "Concerned",
+        choiceC : "Neither concerned nor unconcerned",
+        choiceD : "Unconcerned",
+        choiceE : "Very unconcerned",
         correct : "bad"
+    },{
+        question : "Do you know if testing for Coronavirus is available in your area?",
+        choiceA : "Yes, confirmed",
+        choiceB : "Yes, not confirmed",
+        choiceC : "Not sure",
+        choiceD : "No, not confirmed",
+        choiceE : "No, confirmed",
+        correct : "worst"
     }
 ];
 
@@ -217,18 +233,28 @@ function renderProgress(){
         
 
 
+
+        function myFunction() {
+                    document.getElementById("myCheck").click();
+            }
         //if answer equals best score + 10
+        //maybe i can just after the first one it will dissappear
+        //or a while loop that will loop 
+        function fqf() {
+        }
         function checkAnswer(answer){
             if( answer == 'best'){
                 // answer is correct
                 // change progress color to green
                 answerIsCorrect();
-                score+= 0.86;
+                score+= 0.15;
+                // var fq = scorePerCent + "%";
+                // document.getElementById("fq").value = test;
             }
             else if( answer == 'good'){
                 // answer is correct
-                // change progress color to 
-                score+= 0.75;
+                // change progress color to green
+                score += 0.3;
                 answerIsCorrect();
             }
             else if( answer == 'medium'){
@@ -238,16 +264,16 @@ function renderProgress(){
                 answerIsCorrect();
             }
             else if( answer == 'bad'){
-                score += 0.3;
+                score+= 0.75;
                 // answer is correct
                 // change progress color to green
                 answerIsCorrect();
             }
             else{
+                score+= 0.9;
                 // answer is wrong
                 // change progress color to red
-                score+= 0.15;
-                answerIsWrong();
+                answerIsCorrect();
             }
             count = 0;
             if(runningQuestion < lastQuestion){
@@ -262,20 +288,27 @@ function renderProgress(){
                 // end the quiz and show the score
                 clearInterval(TIMER);
             }
+
         }
 
+
+
+
+
+        b
         // answer is correct
         function answerIsCorrect(){
             document.getElementById(runningQuestion).style.backgroundColor = "black";
         }
 
-        // answer is Wrong
-        function answerIsWrong(){
-            document.getElementById(runningQuestion).style.backgroundColor = "black";
-        }
+
+
+
+
 
         // score render
         function scoreRender(){
+            
             scoreDiv.style.display = "block";
             
             // calculate the amount of question percent answered by the user
@@ -290,25 +323,29 @@ function renderProgress(){
             
             //scoreDiv.innerHTML = "<img src="+ img +">";
 
+
+
+
+
             if(scorePerCent < 30){
-                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Knowledge of infomation</p></h4><hr/><p>Very high chance of contracting COVID-19 through lack of infomation.</p>✔ <p>Your record will be sent to ncdc successfully</p>";
-                    var test = "<p>" + scorePerCent + "%</p> <span style='color: purple;'> Knowledge of infomation.</span> <p style='color: black;'>Very high chance of contracting COVID-19 through lack of infomation.</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    var test = scorePerCent + "%";
                     document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else if (scorePerCent < 50){
-                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Knowledge of infomation</p></h4><hr/><p>High chance of contracting COVID-19 through lack of infomation.<p>✔ </p> Your record will be sent to ncdc successfully</p>";
-                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Knowledge of infomation.</span> <p style='color: black;'>High chance of contracting COVID-19 through lack of infomation.</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Low chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    var test = scorePerCent + "%";
                     document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
                     
             }
             else if (scorePerCent < 70){
-                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Knowledge of infomation</p></h4><hr/><p>Low chance of contracting COVID-19 through lack of infomation.</p>✔ <p> Your record will be sent to ncdc successfully</p>";
-                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Knowledge of infomation.</span><p style='color: black;'>Low chance of contracting COVID-19 through lack of infomation.</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>High chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    var test = scorePerCent + "%";
                     document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
             else { 
-                    modalC.innerHTML += "<h4>"+ scorePerCent + "% <p>Knowledge of infomation</p></h4><hr/><p>Very low chance of contracting COVID-19 through lack of infomation.</p>✔ <p> Your record will be ssent to ncdc successfully</p>";
-                    var test = "<p>" + scorePerCent + "%</p><span style='color: purple;'> Knowledge of infomation.</span><p style='color: black;'>Very low chance of contracting COVID-19 through lack of infomation.</p>";
+                    modalC.innerHTML += "<h2> "+ scorePerCent + "% spread impact</h2><hr/><p>Very high chance of contracting COVID-19 through spread. Your record is sent to ncdc successfully</p>";
+                    var test = scorePerCent + "%";
                     document.getElementById("mytext").value = test;//Now you get the js variable inside your form element
             }
         }
