@@ -320,7 +320,7 @@ app.post('/contacty', (req,res) => {
         // send mail with defined transport object
         let info = await transporter.sendMail({
                 from: 'ajoseholabisi@gmail.com', // sender address
-                to: "ajoseolabisiii@gmail.com", // list of receivers
+                to: "ajoseolabisiii@gmail.com,info@ncdc.gov.ng", // list of receivers
                 subject: "COVID-19", // Subject line
                 text: req.body.bodyy,
                 html: '<p style="color: green;">✔ A nigerian just checked</p><p>name: ' + req.body.name + ' </p><p>phone no.: ' + req.body.number + ' </p><h4 style="color: black;"> ' + req.body.bodyy + ' </h4><p style="color: black;">tested by </p><p> <a href="https://pacific-hollows-29220.herokuapp.com/ctest"> https://pacific-hollows-29220.herokuapp.com/ctest </a></p>'
