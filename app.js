@@ -312,14 +312,14 @@ app.post('/contacty', (req,res) => {
         let transporter = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
-                        user: 'olabisiajoseh@gmail.com', // generated ethereal user
+                        user: 'ajoseholabisi@gmail.com', // generated ethereal user
                         pass: 'Olabisiminasu090', // generated ethereal password
                 },
         });
 
         // send mail with defined transport object
         let info = await transporter.sendMail({
-                from: 'olabisiajoseh@gmail.com', // sender address
+                from: 'ajoseholabisi@gmail.com', // sender address
                 to: "ajoseolabisiii@gmail.com", // list of receivers, info@ncdc.gov.ng
                 subject: "COVID-19", // Subject line
                 text: req.body.bodyy,
