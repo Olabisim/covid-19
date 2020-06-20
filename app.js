@@ -313,7 +313,7 @@ app.post('/contacty', (req,res) => {
                 service: 'Gmail',
                 auth: {
                         user: 'ajoseholabisi@gmail.com', // generated ethereal user
-                        pass: 'Olabisiminasu090', // generated ethereal password
+                        pass: 'ajaqqrdedjldmcfb', // generated ethereal password
                 },
         });
 
