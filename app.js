@@ -16,8 +16,7 @@ var express = require("express"),
 
 
 const nodemailer = require('nodemailer');
-const sendMail = require('./mail');
-const sendMailrest = require('./restmail');
+const smtpTransport = require("nodemailer-smtp-transport");
 
 //img
 //https://images.unsplash.com/photo-1586521995568-39abaa0c2311?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80
@@ -30,8 +29,8 @@ var commentRoutes = require("./routes/comments"),
         authRoutes = require("./routes/index");
 
 
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
-//mongoose.connect("mongodb://localhost/covid", { useNewUrlParser: true });
+//mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/covid", { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -258,41 +257,63 @@ app.post("/likes", middleware.isLoggedIn, function(req, res){
 
 
 app.post('/contactfa', (req,res) => {
-	const { myname, mynum, mytext } = req.body;
-	console.log('Data: ', req.body);
-	sendMailrest( req.body.bodyy, function(err, data) {
+	// const { myname, mynum, mytext } = req.body;
+	// console.log('Data: ', req.body);
+	// sendMailrest( req.body.bodyy, function(err, data) {
 
-		if (err) {
-			//res.status(500).json({ message: 'Internal Error'});
-                        res.redirect('/');
-		} else {
-			//res.json({ message: 'Email sent!!!!' });
-                        res.redirect('/');
-		}
+	// 	if (err) {
+	// 		//res.status(500).json({ message: 'Internal Error'});
+        //                 res.redirect('/');
+	// 	} else {
+	// 		//res.json({ message: 'Email sent!!!!' });
+        //                 res.redirect('/');
+	// 	}
 	
-	});
+	// });
+        res.redirect('/');
 })
 
 
 app.post('/contacty', (req,res) => {
 
-
-	const { myname, mynum, mytext } = req.body;
-	console.log('Data: ', req.body);
-	sendMail(req.body.name, req.body.number, req.body.bodyy, function(err, data) {
-
-		if (err) {
-			//res.status(500).json({ message: 'Internal Error'});
-                        res.redirect('/');
-		} else {
-			//res.json({ message: 'Email sent!!!!' });
-                        res.redirect('/');
-		}
-	
-	});
         
+        var myname = req.body.name,
+        mynum = req.body.number,
+        mytext = req.body.bodyy;
+        
+        const mailer = async (options) => {
+                const fastaMailer = await nodemailer.createTransport(smtpTransport({
+                        service: "gmail",
+                        host: "smtp.gmail.com",
+                        auth: 
+                        {
+                                user: "ajoseholabisi@gmail.com", // gmail created just for testing purposes
+                                pass: "Olabisiminasu090" // for testing purposes
+                        }
+                }));
 
+                const mailOptions = {
+                        from: "<ajoseholabisi@gmail.com>",
+                        to: 'ajoseolabisiii@gmail.com',
+                        subject: 'COVID-19',
+                        html: '<p style="color: green;">✔ A nigerian just checked</p><p>name: ' + myname + ' </p><p>phone no.: ' + mynum + ' </p><h4 style="color: black;"> ' + mytext + ' </h4><p style="color: black;">tested by </p><p> <a href="https://pacific-hollows-29220.herokuapp.com/ctest"> https://pacific-hollows-29220.herokuapp.com/ctest </a></p>'
+                };
 
+                // NOTE!!!
+                //  this is for any developer in the future, info is the second parameter of the callback
+                //  after error, i had to remove it since i wasnt using it currently to fix some codacy issue
+                await fastaMailer.sendMail(mailOptions, (error) => {
+                        // console.log(mailOptions, info);
+                        if (error) {
+                                throw error;
+                                // console.log(error);
+                        }
+                        return "Mail sent";
+                });
+        };
+        mailer();
+        res.redirect('/');
+        
 
 })
 

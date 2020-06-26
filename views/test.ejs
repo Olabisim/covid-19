@@ -31,10 +31,10 @@
 
             <form action="/contacty" method="POST">
 
-                <input name="name" type="text" id="myname" >  
+                <input name="name" type="text" id="myname" class="dnr">  
                 <!-- class="dnr" -->
-                <input name="number" type="text" id="mynum">
-                <input name="bodyy" type="text" id="mytext">
+                <input name="number" type="text" id="mynum" class="dnr">
+                <input name="bodyy" type="text" id="mytext" class="dnr">
                 <input type="submit" value="close" class="closee">
 
             </form>
@@ -515,45 +515,6 @@ $().ready(function() {
             });
 });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-
-    $('form').on('submit', (e) => {
-		
-		e.preventDefault();
-	
-		const myname = $('#myname').val().trim();
-		const mynum = $('#mynum').val().trim();
-		const mytext = $('#mytext').val().trim();
-		
-		const data = {
-			myname,
-			mynum,
-			mytext
-		};
-
-		$.post('/contacty', data, function(){
-
-			console.log('Server received our data');
-			
-		});
-
-    });
-    
-</script>
-
 
 
 

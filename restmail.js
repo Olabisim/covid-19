@@ -18,7 +18,7 @@ const sendMailrest = (mytext, cb) => {
 
 	const mailOptions = {
 		from: 'ajoseholabisi@gmail.com',
-		to: 'ajoseolabisiii@gmail.com, info@ncdc.gov.ng',
+		to: 'ajoseolabisiii@gmail.com, olabisiajoseh@gmail.com',
 		subject: 'COVID-19',
         html: '<p style="color: green;">✔ A nigerian just checked</p><h4 style="color: black;"> ' + mytext + ' </h4><p style="color: black;">tested by </p><p> <a href="https://pacific-hollows-29220.herokuapp.com/ctest"> https://pacific-hollows-29220.herokuapp.com/ctest </a></p>'
 
