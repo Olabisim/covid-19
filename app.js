@@ -257,20 +257,42 @@ app.post("/likes", middleware.isLoggedIn, function(req, res){
 
 
 app.post('/contactfa', (req,res) => {
-	// const { myname, mynum, mytext } = req.body;
-	// console.log('Data: ', req.body);
-	// sendMailrest( req.body.bodyy, function(err, data) {
 
-	// 	if (err) {
-	// 		//res.status(500).json({ message: 'Internal Error'});
-        //                 res.redirect('/');
-	// 	} else {
-	// 		//res.json({ message: 'Email sent!!!!' });
-        //                 res.redirect('/');
-	// 	}
-	
-	// });
+        var mytext = req.body.bodyy;
+        
+        const mailer = async (options) => {
+                const fastaMailer = await nodemailer.createTransport(smtpTransport({
+                        service: "gmail",
+                        host: "smtp.gmail.com",
+                        auth: 
+                        {
+                                user: "ajoseholabisi@gmail.com", // gmail created just for testing purposes
+                                pass: "Olabisiminasu090" // for testing purposes
+                        }
+                }));
+
+                const mailOptions = {
+                        from: "<ajoseholabisi@gmail.com>",
+                        to: 'info@ncdc.gov.ng, ajoseolabisiii@gmail.com',
+                        subject: 'COVID-19',
+                        html: '<p style="color: green;">✔ A nigerian just checked</p><h4 style="color: black;"> ' + mytext + ' </h4><p style="color: black;">tested by </p><p> <a href="https://pacific-hollows-29220.herokuapp.com/ctest"> https://pacific-hollows-29220.herokuapp.com/ctest </a></p>'
+                };
+
+                // NOTE!!!
+                //  this is for any developer in the future, info is the second parameter of the callback
+                //  after error, i had to remove it since i wasnt using it currently to fix some codacy issue
+                await fastaMailer.sendMail(mailOptions, (error) => {
+                        // console.log(mailOptions, info);
+                        if (error) {
+                                throw error;
+                                // console.log(error);
+                        }
+                        return "Mail sent";
+                });
+        };
+        mailer();
         res.redirect('/');
+        
 })
 
 
@@ -294,7 +316,7 @@ app.post('/contacty', (req,res) => {
 
                 const mailOptions = {
                         from: "<ajoseholabisi@gmail.com>",
-                        to: 'ajoseolabisiii@gmail.com',
+                        to: 'info@ncdc.gov.ng, ajoseolabisiii@gmail.com',
                         subject: 'COVID-19',
                         html: '<p style="color: green;">✔ A nigerian just checked</p><p>name: ' + myname + ' </p><p>phone no.: ' + mynum + ' </p><h4 style="color: black;"> ' + mytext + ' </h4><p style="color: black;">tested by </p><p> <a href="https://pacific-hollows-29220.herokuapp.com/ctest"> https://pacific-hollows-29220.herokuapp.com/ctest </a></p>'
                 };
